@@ -2,7 +2,10 @@
 
 https://carherco.es/ejercicio-2021-07-02/public/
 
-Para realizar este proyecto se siguierón los siguientes pasos.
+Para realizar este proyecto se siguierón los siguientes pasos:
+
+* 01 Creación del Proyecto
+* 02 Añadirlo GIT al Proyecto
 
 ## ✅ 01 Creación del Proyecto
 
@@ -105,6 +108,44 @@ git remote add origin https://github.com/adolfodelarosades/COD-Symphony-5-Ejerci
 git branch -M main
 git push -u origin main
 ```
+
+Volviendo a la carpeta del proyecto vamos a hacer algo parecido a la segunda opción:
+
+Vamos a ejecutar el comando que nos suguiere:
+
+```sh
+git remote add origin https://github.com/adolfodelarosades/COD-Symphony-5-Ejercicio-01.git
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124352027-2b537d00-dbfe-11eb-9d59-4fcc620ee96b.png)
+
+Con esto ya tenemos "likado" el repositorio local con el remoto.
+
+Lo siguiente es hacer un:
+
+```sh
+git push
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124352104-92713180-dbfe-11eb-80a2-61b6f530a928.png)
+
+
+Para el primer PUSH debemos ejecutar el comando que nos indica:
+
+```sh
+git push --set-upstream origin master
+```
+
+Nos pide las claves de nuestra cuenta GitHub.
+
+![image](https://user-images.githubusercontent.com/23094588/124352238-8fc30c00-dbff-11eb-969e-2c8c20b2c9f7.png)
+
+Una vez ingresadas se ha hecho el volcado del repositorio local al remoto, al refrescar el repositorio en GitHub vemos el proyecto subido.
+
+
+![image](https://user-images.githubusercontent.com/23094588/124352299-de70a600-dbff-11eb-90c0-17e278b2bc86.png)
+
+
 
 
 
