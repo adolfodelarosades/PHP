@@ -297,12 +297,115 @@ Si cargamos nuevamente la ruta `http://localhost:8000/home` notamos un ligero ca
 
 :eight_pointed_black_star: Subir a GIT
 
-
 ```sh
 git status
 git add .
 git commit -m "Añadir Bootstrap"
 ```
+
+## ✅ 09 Modificar Página Home
+
+Para modificar la página Home debemos modificar la plantilla `templates/home/index.html.twig` con el contenido deseado.
+
+```html
+{% extends 'base.html.twig' %}
+
+{% block title %}Fondos{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">FONDOS</a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="">¿Quienes Somos?</a>
+    </li>
+  </ul>
+  <form class="form-inline">
+    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Login</button>
+  </form>
+</nav>
+<main class="container">
+  <div class="starter-template text-center py-5 px-3">
+    <h1>Gestión de Fondos</h1>
+    <p class="lead">Libros, Revistas, Documentales, Videos, Películas CDs, ...</p>
+    <img src="images/libros.jpg" class="img-fluid rounded-circle" width="60%" height="60%" alt="...">
+  </div>
+</main>
+<footer class="footer bg-dark rounded-top text-center">
+  <div class="container py-2">
+    <p class="text-white my-2">
+      &copy; Adolfo de la Rosa
+    </p>
+  </div>
+</footer>
+
+{% endblock %}
+```
+
+Como la plantilla necesita la imagen `images/libros.jpg` dentro de la carpeta `public` creamos la carpeta `images` y colocamos el archivo `libros.jpg`.
+
+Si cargamos la ruta `http://localhost:8000/home` lo que vemos es:
+
+![image](https://user-images.githubusercontent.com/23094588/124359491-9a909780-dc25-11eb-8787-17ab92c0e8d9.png)
+
+Como vemos el `footer` no esta bien colocado. En el `footer` tenemos la etiqueta `<footer class="footer bg-dark rounded-top text-center">`, la clase `footer` es inventada y es allí donde vamos a poner el estilo para que el `footer` aparezca donde debe ser.
+
+En la carpeta `public\css` añadimos el archivo `styles.css` cón el siguiente código:
+
+```css
+.footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:60px;
+  width:100%;
+}
+```
+
+Si cargamos nuevamente la ruta `http://localhost:8000/home` vemos:
+
+![image](https://user-images.githubusercontent.com/23094588/124359762-a92b7e80-dc26-11eb-8866-7f474340cbcb.png)
+
+Además de invocar esta página con `http://localhost:8000/home` queremos que se llame también con `http://localhost:8000/`, por lo que debemos modificar el archivo `src/Controller/HomeController.php` añadiendo la ruta adicional:
+
+```html
+@Route("/", name="root")
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124360044-e04e5f80-dc27-11eb-8c77-4a93da9e3bcb.png)
+
+Al invocar la ruta `http://localhost:8000` o `http://localhost:8000/` tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/124359906-37a00000-dc27-11eb-89b7-257137380dfb.png)
+
+EXISTEN DOS RUTAS PARA UNA MISMA ACCIÓN.
+
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Modificar Página Home"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124360084-155ab200-dc28-11eb-912e-c6c845105a18.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124360106-36230780-dc28-11eb-9837-66185def6e14.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124360115-3d4a1580-dc28-11eb-8ac1-607d0ba41d6c.png)
+
+
+
+
+
+
+
 
 
 
