@@ -8,6 +8,11 @@ Para realizar este proyecto se siguierón los siguientes pasos:
 * 02 Añadirlo GIT al Proyecto
 * 03 Cargar el Proyecto en VSC
 * 04 Ejecutar el Proyecto
+* 05 Crear Controlador `Home`
+* 06 Crear BD en MySQL llamada `sepe_ejercicio_01`
+* 07 Modificar Configuración de la BD en `.env`
+* 08 Añadir BootsStrap a la Aplicación
+* 09 Modificar Página Home
 
 ## ✅ 01 Creación del Proyecto
 
