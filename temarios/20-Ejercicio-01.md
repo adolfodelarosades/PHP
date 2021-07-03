@@ -233,12 +233,76 @@ git push
 
 ![image](https://user-images.githubusercontent.com/23094588/124358094-ff94bf00-dc1e-11eb-8d74-9360c7099d94.png)
 
+## ✅ 07 Modificar Configuración de la BD en `.env`
+
+En el archivo `.env` insertamos la siguiente línea de código:
+
+```sh
+DATABASE_URL="mysql://root:root@127.0.0.1:3306/sepe_ejercicio_01?serverVersion=5.7"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124358566-38359800-dc21-11eb-99e6-b545c43a210d.png)
+
+Cargamos nuevamente la ruta `http://localhost:8000/home` y el error desaparece mostrando lo siguiente:
+
+![image](https://user-images.githubusercontent.com/23094588/124358612-66b37300-dc21-11eb-80ee-a740613ff35f.png)
 
 
+:eight_pointed_black_star: Subir a GIT
+
+## ✅ 08 Añadir BootsStrap a la Aplicación
+
+En la carpeta `public` del proyecto creamos las carpetas `css` y `js`.
+
+![image](https://user-images.githubusercontent.com/23094588/124358787-27d1ed00-dc22-11eb-8802-42e417cd24df.png)
+
+Dentro colocamos los archivos `bootstrap.min.css` y `bootstrap.min.js` en su carpeta correspondiente.
+
+![image](https://user-images.githubusercontent.com/23094588/124358869-93b45580-dc22-11eb-8db0-6bab60699f19.png)
 
 
+### Modificar el archivo `base.html.twig` para aplicar Bootstrap.
+
+El código en esta plantilla debe ser el siguiente:
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="/js/bootstrap.min.js"></script>
+        {% endblock %}
+    </body>
+</html>
+```
+
+Si cargamos nuevamente la ruta `http://localhost:8000/home` notamos un ligero cambio debido a que ya se esta aplicando Bootstrap a nuestra plantilla.
+
+![image](https://user-images.githubusercontent.com/23094588/124358955-fc033700-dc22-11eb-9e5a-9e7cac2886dc.png)
 
 
+:eight_pointed_black_star: Subir a GIT
+
+
+```sh
+git status
+git add .
+git commit -m "Añadir Bootstrap"
+```
 
 
 
