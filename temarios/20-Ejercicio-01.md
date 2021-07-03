@@ -560,4 +560,93 @@ git commit -m "Crear Controlador About"
 ![image](https://user-images.githubusercontent.com/23094588/124365027-a8561500-dc45-11eb-81f6-318f2174a54b.png)
 
 
+## ✅ 12 Crear Controlador `Login`
+
+Vamos a crear el controlador `Login` que corresponde a la sección **Iniciar Sesión** con la instrucción:
+
+```sh
+php bin/console make:controller
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124365076-fec35380-dc45-11eb-873b-53be8b64b74e.png)
+
+
+Se han creado dos archivos `src/Controller/LoginController.php` e `templates/login/index.html.twig`. 
+
+Vamos a hacer algunos cambios para obtener la página personalizada.
+
+En `templates/login/index.html.twig` vamos a colocar el siguiente código:
+
+```html
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/styles-login.css">
+{% endblock %}
+
+{% block body %}
+{{ include('comunes/_menu_inicial.html.twig') }}
+<main class="container my-4">
+  
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label class="small mb-1" for="inputEmailAddress">Email</label>
+                            <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Introduzca email" />
+                        </div>
+                        <div class="form-group">
+                            <label class="small mb-1" for="inputPassword">Password</label>
+                            <input class="form-control py-4" id="inputPassword" type="password" placeholder="Introduzca password" />
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
+                                <label class="custom-control-label" for="rememberPasswordCheck">Recordar contraseña</label>
+                            </div>
+                        </div>
+                        <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                            <a class="small" href="password.html">¿Has olvidado tu contraseña?</a>
+                            <a class="btn btn-secondary" href="index.html">Login</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <div class="small"><a href="#">¿Necesito una cuenta? ¡Inscribirse!</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{ include('comunes/_footer_inicial.html.twig') }}
+{% endblock %}
+```
+
+Vamos a añadir en `public/css` la hoja de estilos `styles-plantilla.css` la cual es una hoja de estilos de la plantilla. Esta hoja de estilos se puede depurar para que solo tenga lo correspondiente al login.
+
+Al llamar al URL `http://localhost:8000/login` tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/124368019-faeefb80-dc5c-11eb-9d57-02cf5127cadf.png)
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Crear Controlador Login"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124368042-21149b80-dc5d-11eb-858d-808cdced169b.png)
+
+
+
+
+
 
