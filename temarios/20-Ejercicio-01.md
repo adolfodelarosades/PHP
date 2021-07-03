@@ -13,7 +13,8 @@ Para realizar este proyecto se siguierón los siguientes pasos:
 * 07 Modificar Configuración de la BD en `.env`
 * 08 Añadir BootsStrap a la Aplicación
 * 09 Modificar Página Home
-
+* 10 Separar Menú y Footer de la Página Home
+* 
 ## ✅ 01 Creación del Proyecto
 
 Nos colocamos en el directorio donde deseamos crear el proyecto que llamaremos "ejercicio-01"
@@ -460,7 +461,6 @@ La plantilla `templates/home/index.html.twig` queda así:
 
 ![image](https://user-images.githubusercontent.com/23094588/124364079-72159700-dc3f-11eb-8b3b-b1d8ea560e6b.png)
 
-
 Si cargamos el link `http://localhost:8000/home` vemos exactamente lo mismo, pero lo hemos estructurado mejor para poder reutilizar el código:
 
 ![image](https://user-images.githubusercontent.com/23094588/124364050-501c1480-dc3f-11eb-921c-5150872d515f.png)
@@ -477,9 +477,87 @@ git commit -m "Separar Menú y Footer de la Página Home"
 ![image](https://user-images.githubusercontent.com/23094588/124364124-b3a64200-dc3f-11eb-911f-370599676de1.png)
 
 
+## ✅ 11 Crear Controlador `About`
+
+Vamos a crear el controlador `About` que corresponde a la sección **Quiénes somos** con la instrucción:
+
+```sh
+php bin/console make:controller
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124364324-0e8c6900-dc41-11eb-81e8-78dfd19ec4ae.png)
 
 
+Se han creado dos archivos `src/Controller/AboutController.php` e `templates/about/index.html.twig`. 
 
+
+Al invocar la ruta `http://localhost:8000/about` vemos lo que nos ha creado Symphony.
+
+![image](https://user-images.githubusercontent.com/23094588/124364414-b99d2280-dc41-11eb-9fbb-e011dffe2ec7.png)
+
+Vamos a hacer algunos cambios para obtener la página personalizada.
+
+
+En `src/Controller/AboutController.php` vamos a cambiar 
+
+```html
+@Route("/about", name="about")
+```
+
+por
+
+```html
+@Route("/quienes-somos", name="about")
+```
+
+En `templates/about/index.html.twig` colocamos el siguinete código:
+
+```html
+{% extends 'base.html.twig' %}
+
+{% block title %}Quiénes somos{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+{% endblock %}
+
+{% block body %}
+{{ include('comunes/_menu_inicial.html.twig') }}
+<main class="container my-4">
+  
+  <h1>Quiénes somos</h1>
+
+  <h3>Libros, Revistas, Documentales, Videos, Películas CDs, ...</h3>
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada egestas risus hendrerit tincidunt. Nunc eu semper justo, non ultricies nibh. Sed a viverra lorem. Donec sed porttitor turpis, eu cursus tellus. Proin dignissim lorem et eros aliquam faucibus. Suspendisse fermentum, erat et vulputate dapibus, augue purus maximus dolor, vitae gravida eros ex vehicula felis. Vestibulum feugiat nibh urna, fringilla ultrices eros bibendum id. In mollis eleifend pulvinar. Nulla porttitor quis felis at ultricies. Integer sed mi sit amet est feugiat tempor. Phasellus a velit non ligula placerat maximus non sit amet orci. In a imperdiet felis.</p>
+
+  <p>Quisque tempor nunc in turpis molestie laoreet. Donec faucibus, urna sed sodales sagittis, magna libero fermentum tortor, et faucibus nunc enim a lectus. Donec magna velit, viverra vitae eros sit amet, pretium gravida quam. Duis orci lorem, lacinia non tellus ac, maximus dictum tellus. Donec id euismod metus. Integer aliquam enim nunc, at hendrerit ipsum convallis et. Suspendisse vehicula metus mi, eget ullamcorper orci faucibus ac. Quisque a gravida felis, vitae sagittis purus. In blandit viverra ultricies. Sed viverra orci ligula, id condimentum elit elementum vitae. Quisque luctus pulvinar tincidunt. Maecenas vitae nisi ex. Morbi at aliquet tellus, at ullamcorper dui. Mauris faucibus porttitor placerat. Nulla porttitor metus non leo maximus ornare. Maecenas rhoncus gravida convallis.</p>
+
+  <p>Donec tincidunt iaculis malesuada. Donec in semper lorem, eget fringilla lorem. Curabitur vel nisl sollicitudin, auctor lacus a, varius diam. Suspendisse facilisis et orci sed semper. Curabitur sit amet elementum nulla. Suspendisse potenti. Nunc dignissim nec leo at pellentesque. Vivamus gravida ex ex, id egestas nisl scelerisque rhoncus.</p>
+
+  <p>Mauris rutrum nibh dolor, non lacinia erat pellentesque nec. Duis faucibus ultrices purus, id placerat dolor malesuada vel. Duis semper facilisis consectetur. In iaculis metus in libero elementum mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar erat nec massa porttitor efficitur. Mauris eget orci id erat sodales imperdiet. Nunc ante enim, tincidunt in metus eget, semper lobortis sapien. Nullam non feugiat ipsum.</p>
+
+  <p>Fusce quis bibendum leo, sit amet aliquam ligula. Cras fringilla est non quam facilisis porta. Proin in dolor ullamcorper, volutpat lorem id, molestie risus. Nulla maximus dignissim massa sit amet suscipit. Nulla lacus nisi, congue eu lorem in, bibendum placerat est. Sed gravida pulvinar dignissim. In ex turpis, pretium sed augue nec, condimentum ultricies elit. Curabitur ut pulvinar mauris, et laoreet purus. Vestibulum eleifend vestibulum sollicitudin. Donec quis fringilla ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam porttitor ut lacus at posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec luctus lectus nulla, ut dignissim odio semper vel.</p>
+
+</main>
+{{ include('comunes/_footer_inicial.html.twig') }}
+{% endblock %}
+```
+
+Al llamar al URL `http://localhost:8000/quienes-somos` tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/124364962-53b29a00-dc45-11eb-8f44-899b9a52d2ae.png)
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Crear Controlador About"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124365027-a8561500-dc45-11eb-81f6-318f2174a54b.png)
 
 
 
