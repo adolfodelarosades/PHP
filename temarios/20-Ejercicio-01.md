@@ -44,6 +44,11 @@ Y pulsamos los siguientes comandos git:
 
 ![image](https://user-images.githubusercontent.com/23094588/124347738-5b8f2180-dbe6-11eb-9d5c-07cbd5230023.png)
 
+![image](https://user-images.githubusercontent.com/23094588/124347781-9ee99000-dbe6-11eb-8c3b-b520afa59970.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124347844-ef60ed80-dbe6-11eb-9b4f-00cf3f579650.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124347856-01429080-dbe7-11eb-98ff-525f140e2fe4.png)
 
 
 
