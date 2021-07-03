@@ -39,6 +39,16 @@ Entramos a la carpeta del proyecto:
 Y pulsamos los siguientes comandos git:
 
 ```sh
+git init
+
+git status
+
+git add .
+
+git status
+
+git commit -m "Commit Inicial"
+
 
 ```
 
