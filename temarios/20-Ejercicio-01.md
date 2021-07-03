@@ -406,13 +406,75 @@ git commit -m "Modificar Página Home"
 ![image](https://user-images.githubusercontent.com/23094588/124360115-3d4a1580-dc28-11eb-8ac1-607d0ba41d6c.png)
 
 
+## ✅ 10 Separar Menú y Footer de la Página Home
+
+Para poder reutilizar el Menú y Footer en las páginas `Login` y `About` vamos a separarlos de la página `Home`.
+
+Crear en `template` la carpeta `comunes` y crear los archivos `_menu_inicial.html.twig` y `_footer_inicial.html.twig`
+
+![image](https://user-images.githubusercontent.com/23094588/124363758-6e811080-dc3d-11eb-8cc0-4ad4d616e7a4.png)
+
+De la página `templates/home/index.html.twig` vamos a cortar el siguiente código para colocarlo en `_menu_inicial.html.twig`
 
 
+```html
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">FONDOS</a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="">¿Quienes Somos?</a>
+    </li>
+  </ul>
+  <form class="form-inline">
+    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Login</button>
+  </form>
+</nav>
+```
+
+Y en su lugar colocamos:
+
+```html
+{{ include('_menu_inicial.html.twig') }}
+```
+
+También de la página `templates/home/index.html.twig` vamos a cortar el siguiente código para colocarlo en `_footer_inicial.html.twig`
+
+```html
+<footer class="footer bg-dark rounded-top text-center">
+  <div class="container py-2">
+    <p class="text-white my-2">
+      &copy; Adolfo de la Rosa
+    </p>
+  </div>
+</footer>
+```
 
 
+Y en su lugar colocamos:
+
+```html
+{{ include('_footer_inicial.html.twig') }}
+```
+
+La plantilla `templates/home/index.html.twig` queda así:
+
+![image](https://user-images.githubusercontent.com/23094588/124364079-72159700-dc3f-11eb-8b3b-b1d8ea560e6b.png)
 
 
+Si cargamos el link `http://localhost:8000/home` vemos exactamente lo mismo, pero lo hemos estructurado mejor para poder reutilizar el código:
 
+![image](https://user-images.githubusercontent.com/23094588/124364050-501c1480-dc3f-11eb-921c-5150872d515f.png)
+
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Separar Menú y Footer de la Página Home"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124364124-b3a64200-dc3f-11eb-911f-370599676de1.png)
 
 
 
