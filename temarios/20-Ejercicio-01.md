@@ -4,7 +4,7 @@ https://carherco.es/ejercicio-2021-07-02/public/
 
 Para realizar este proyecto se siguierón los siguientes pasos.
 
-## Creación del Proyecto
+## 01 Creación del Proyecto
 
 Nos colocamos en el directorio donde deseamos crear el proyecto que llamaremos "ejercicio-01"
 
