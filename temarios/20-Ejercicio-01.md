@@ -6,7 +6,8 @@ Para realizar este proyecto se siguierón los siguientes pasos:
 
 * 01 Creación del Proyecto
 * 02 Añadirlo GIT al Proyecto
-* 03 Ejecutar el Proyecto
+* 03 Cargar el Proyecto en VSC
+* 04 Ejecutar el Proyecto
 
 ## ✅ 01 Creación del Proyecto
 
@@ -185,6 +186,39 @@ https://symfony.com/doc/current/index.html
 https://symfony.com/doc/current/page_creation.html
 
 https://symfony.com/community
+
+
+## ✅ 05 Crear Controlador `Home`
+
+Vamos a comenzar por crear la página Home de la APP, creando el controlador `Home` con la siguiete instrucción:
+
+```sh
+php bin/console make:controller
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124357848-e3dce900-dc1d-11eb-9079-824b1160c602.png)
+
+Con esto se han creado dos archivos `HomeController.php` e `index.html.twig` en las rutas que nos indica. 
+
+![image](https://user-images.githubusercontent.com/23094588/124357930-3fa77200-dc1e-11eb-8ab6-3d6acbeaf717.png)
+
+
+Podemos invocar a la ruta `http://localhost:8000/home` para ver la plantilla asociada al Controlador `Home`.
+
+![image](https://user-images.githubusercontent.com/23094588/124358012-9ad96480-dc1e-11eb-9125-b12816246114.png)
+
+Pero como podemos ver nos presenta una excepción, esto se debe a que necesita información sobre la BD.
+
+:eight_pointed_black_star: Subir paso a GIT
+
+
+## ✅ 06 Crear BD en MySQL llamada `sepe_ejercicio_01`
+
+![image](https://user-images.githubusercontent.com/23094588/124358094-ff94bf00-dc1e-11eb-8d74-9360c7099d94.png)
+
+
+
+
 
 
 
