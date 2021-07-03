@@ -178,6 +178,16 @@ Como vemos nos indica que abramos el enlace `http://localhost:8000` en el navega
 
 ![image](https://user-images.githubusercontent.com/23094588/124352792-ed0c8c80-dc02-11eb-80c8-a01efe14dd98.png)
 
+Los enlaces que nos suguiere son:
+
+https://symfony.com/doc/current/index.html
+
+https://symfony.com/doc/current/page_creation.html
+
+https://symfony.com/community
+
+
+
 
 
 
