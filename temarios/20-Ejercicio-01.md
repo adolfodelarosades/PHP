@@ -6,6 +6,7 @@ Para realizar este proyecto se siguierón los siguientes pasos:
 
 * 01 Creación del Proyecto
 * 02 Añadirlo GIT al Proyecto
+* 03 Ejecutar el Proyecto
 
 ## ✅ 01 Creación del Proyecto
 
@@ -142,8 +143,44 @@ Nos pide las claves de nuestra cuenta GitHub.
 
 Una vez ingresadas se ha hecho el volcado del repositorio local al remoto, al refrescar el repositorio en GitHub vemos el proyecto subido.
 
-
 ![image](https://user-images.githubusercontent.com/23094588/124352299-de70a600-dbff-11eb-90c0-17e278b2bc86.png)
+
+A partir de aquí los siguientes PUSH serán simplemente con:
+
+```sh
+git push
+```
+
+## ✅ 03 Cargar el Proyecto en VSC
+
+![image](https://user-images.githubusercontent.com/23094588/124352564-48d61600-dc01-11eb-9d6f-c6f91e212887.png)
+
+La estructura del proyecto la tenemos a la izquierda de VSC:
+
+![image](https://user-images.githubusercontent.com/23094588/124352591-6f944c80-dc01-11eb-9bab-4f3f46abbb38.png)
+
+
+## ✅ 04 Ejecutar el Proyecto
+
+Para ejecutar el proyecto creado ejecutamos el comando:
+
+```sh
+php -S localhost:8000 -t public/
+```
+
+Es recomendable abrir una nueva terminal para ejecutar este comando ya que se quedará bloqueada mostrando el LOG del Servidor.
+
+Esto ejecuta el proyecto en un Server que viene incluido con PHP en el puerto 8000:
+
+![image](https://user-images.githubusercontent.com/23094588/124352722-78d1e900-dc02-11eb-9a0d-80cb6e0fc773.png)
+
+Como vemos nos indica que abramos el enlace `http://localhost:8000` en el navegador.
+
+![image](https://user-images.githubusercontent.com/23094588/124352792-ed0c8c80-dc02-11eb-80c8-a01efe14dd98.png)
+
+
+
+
 
 
 
