@@ -209,7 +209,24 @@ Podemos invocar a la ruta `http://localhost:8000/home` para ver la plantilla aso
 
 Pero como podemos ver nos presenta una excepción, esto se debe a que necesita información sobre la BD.
 
-:eight_pointed_black_star: Subir paso a GIT
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git status
+git commit -m "Crear Controlador Home"
+git status
+git push
+
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124358244-b6913a80-dc1f-11eb-8c83-395fdace2f2a.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124358298-fb1cd600-dc1f-11eb-8dd5-c53676fd3cbc.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124358365-3ae3bd80-dc20-11eb-9758-f582d1388a09.png)
+
 
 
 ## ✅ 06 Crear BD en MySQL llamada `sepe_ejercicio_01`
