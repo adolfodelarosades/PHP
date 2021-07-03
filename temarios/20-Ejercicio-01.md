@@ -4,7 +4,7 @@ https://carherco.es/ejercicio-2021-07-02/public/
 
 Para realizar este proyecto se siguierón los siguientes pasos.
 
-## 01 Creación del Proyecto
+## ✅ 01 Creación del Proyecto
 
 Nos colocamos en el directorio donde deseamos crear el proyecto que llamaremos "ejercicio-01"
 
@@ -30,7 +30,7 @@ Cuando finaliza podemos ver el contenido y comprobar que el proyecto se ha cread
 
 ![image](https://user-images.githubusercontent.com/23094588/124347392-d8b99700-dbe4-11eb-92e6-7045e9b3e9f5.png)
 
-## 02 Añadirlo GIT al Proyecto
+## ✅ 02 Añadirlo GIT al Proyecto
 
 Entramos a la carpeta del proyecto:
 
