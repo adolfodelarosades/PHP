@@ -30,5 +30,14 @@ Cuando finaliza podemos ver el contenido y comprobar que el proyecto se ha cread
 
 ![image](https://user-images.githubusercontent.com/23094588/124347392-d8b99700-dbe4-11eb-92e6-7045e9b3e9f5.png)
 
+## 02 Añadirlo GIT al Proyecto
+
+Entramos a la carpeta del proyecto:
+
+![image](https://user-images.githubusercontent.com/23094588/124347589-b4aa8580-dbe5-11eb-8125-1ebdbd277a4d.png)
+
+
+
+
 
 
