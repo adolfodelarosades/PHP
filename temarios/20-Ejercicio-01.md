@@ -67,4 +67,11 @@ git status
 
 ### Añadir GitHub
 
+Entrar a nuestra Cuenta de GitHub.
+
+![image](https://user-images.githubusercontent.com/23094588/124348956-1f12f400-dbed-11eb-82ff-c5424c1aced2.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124348984-3b169580-dbed-11eb-956e-7afe982190ad.png)
+
+
 
