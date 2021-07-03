@@ -36,6 +36,8 @@ Entramos a la carpeta del proyecto:
 
 ![image](https://user-images.githubusercontent.com/23094588/124347589-b4aa8580-dbe5-11eb-8125-1ebdbd277a4d.png)
 
+### Añadir GIT localmente.
+
 Y pulsamos los siguientes comandos git:
 
 ```sh
@@ -49,7 +51,7 @@ git status
 
 git commit -m "Commit Inicial"
 
-
+git status
 ```
 
 ![image](https://user-images.githubusercontent.com/23094588/124347738-5b8f2180-dbe6-11eb-9d5c-07cbd5230023.png)
@@ -60,5 +62,9 @@ git commit -m "Commit Inicial"
 
 ![image](https://user-images.githubusercontent.com/23094588/124347856-01429080-dbe7-11eb-98ff-525f140e2fe4.png)
 
+![image](https://user-images.githubusercontent.com/23094588/124347951-74e49d80-dbe7-11eb-9ddd-08c24a9cbf2d.png)
+
+
+### Añadir GitHub
 
 
