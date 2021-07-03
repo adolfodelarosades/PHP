@@ -73,5 +73,40 @@ Entrar a nuestra Cuenta de GitHub.
 
 ![image](https://user-images.githubusercontent.com/23094588/124348984-3b169580-dbed-11eb-956e-7afe982190ad.png)
 
+Vamos a crear un nuevo repositorio llamado `COD-Symphony-5-Ejercicio-01`.
+
+![image](https://user-images.githubusercontent.com/23094588/124351514-23460e00-dbfb-11eb-8711-24ecf2bcc91a.png)
+
+Lo hemos creado totalmente vacío para que nos indique las instrucciones que debemos seguir para ligarlo con el repositorio local.
+
+![image](https://user-images.githubusercontent.com/23094588/124351752-81272580-dbfc-11eb-95aa-688564cb12d0.png)
+
+
+Nos indica dos grupos de instrucciones, una para cuando no se ha creado el repositorio local:
+
+#### …or create a new repository on the command line
+
+```sh
+echo "# COD-Symphony-5-Ejercicio-01" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/adolfodelarosades/COD-Symphony-5-Ejercicio-01.git
+git push -u origin main
+```
+
+Otro para cuando ya tenemos el repositorio local, que es nuestro caso:
+
+#### …or push an existing repository from the command line
+
+```sh
+git remote add origin https://github.com/adolfodelarosades/COD-Symphony-5-Ejercicio-01.git
+git branch -M main
+git push -u origin main
+```
+
+
+
 
 
