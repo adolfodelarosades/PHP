@@ -14,7 +14,9 @@ Para realizar este proyecto se siguierón los siguientes pasos:
 * 08 Añadir BootsStrap a la Aplicación
 * 09 Modificar Página Home
 * 10 Separar Menú y Footer de la Página Home
-* 
+* 11 Crear Controlador `About`
+* 12 Crear Controlador `Login`
+* 13 Asociar en el menú las acciones `About` y `Login` 
 ## ✅ 01 Creación del Proyecto
 
 Nos colocamos en el directorio donde deseamos crear el proyecto que llamaremos "ejercicio-01"
@@ -645,8 +647,51 @@ git commit -m "Crear Controlador Login"
 
 ![image](https://user-images.githubusercontent.com/23094588/124368042-21149b80-dc5d-11eb-858d-808cdced169b.png)
 
+## ✅ 13 Asociar en el menú las acciones `About` y `Login` 
 
 
+En la plantlla `_menu_inicial.html.twig` vamos a usar `{{path('nombre acción')}}` para linkar las opciones del menú a las acciones.
+
+```html
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">FONDOS</a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="{{path('about')}}">Quiénes somos</a>
+    </li>
+  </ul>
+  <form class="form-inline" action="{{path('login')}}">
+    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Login</button>
+  </form>
+</nav>
+```
+
+
+![image](https://user-images.githubusercontent.com/23094588/124368139-887f1b00-dc5e-11eb-8556-b04da2ef7217.png)
+
+
+Al pulsar en `Quiénes somos` nos presenta:
+
+![image](https://user-images.githubusercontent.com/23094588/124368151-aba9ca80-dc5e-11eb-9f67-5ae4657c2670.png)
+
+
+Y al presionar sobre el botón `Login` nos presenta:
+
+![image](https://user-images.githubusercontent.com/23094588/124368178-cda34d00-dc5e-11eb-94be-b4cf1bb2a9ed.png)
+
+
+:x: FALTA QUE RESALTE LAS OPCIONES SELECCIONADAS.
+
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Asociar en el menú las acciones About y Login"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124368212-207d0480-dc5f-11eb-9776-e317f4bb3cd3.png)
 
 
 
