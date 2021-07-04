@@ -1246,10 +1246,164 @@ Este comando hace el mapeo de las Entidades que tenemos a tablas de la BD, si re
 
 ![image](https://user-images.githubusercontent.com/23094588/124396224-82de0f80-dd08-11eb-8e33-8bbfbf0201b9.png)
 
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Realizar las Migration para crear la BD en base a las Entidades existentes"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124396307-026bde80-dd09-11eb-817d-27441eee0260.png)
+
+
+## ✅ 24 Diseñar la Página de las Editoriales
+
+### Meter Manualmente un Registro en la Tabla `editorial`
+
+Lo primero que vamos a hacer es manualmente insertar un registro en la tabla `editorial`.
+
+![image](https://user-images.githubusercontent.com/23094588/124396398-8faf3300-dd09-11eb-8e58-2f4753dd41e5.png)
+
+```sql
+INSERT INTO `sepe_ejercicio_01`.`editorial` (`id`, `nombre`) VALUES ('1', 'Alfaguara');
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124396430-cedd8400-dd09-11eb-90db-29ada6d0ebba.png)
+
+### Recuperar Editoriales de la BD y pasarlas a la Plantilla
+
+Vamos a modificar el controlador `EditorialesController.php`.
+
+![image](https://user-images.githubusercontent.com/23094588/124397071-e585da00-dd0d-11eb-8198-15a821db6358.png)
+
+* Hemos inyectado el Repositorio `EditorialRepository` para poder usar sus métodos, importante la clausula `use App\Repository\EditorialRepository;` para poder usarlo.
+* `$editoriales = $editorialRepository->findAll();` recuperamos todas las editoriales existentes usando el método `findAll()` y las almacenamos en `$editoriales`.
+* Mandamos `'editoriales' => $editoriales` a nuestra plantilla `editoriales/index.html.twig`.
+
+### Diseñar la Página de las Editoriales
+
+En la plantilla `editoriales/index.html.twig` poner el siguiente código:
+
+![image](https://user-images.githubusercontent.com/23094588/124397168-a015dc80-dd0e-11eb-8b47-8e608bef9614.png)
+
+Revisamos lo que llega el `editoriales` sacandolo a consola.
+
+Si todo va bien creamos una tabla para mostrar los datos de las entidades.
+
+### Revisar la Salida
+
+![image](https://user-images.githubusercontent.com/23094588/124397234-0d297200-dd0f-11eb-9976-51c4dc2173e2.png)
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Diseñar la Página de las Editoriales"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124397278-55489480-dd0f-11eb-83ff-504b98eab484.png)
+
+
+## ✅ 25 Diseñar la Página de los Autores
+
+### Meter Manualmente un Registro en la Tabla `autor`
+
+
+![image](https://user-images.githubusercontent.com/23094588/124397413-f33c5f00-dd0f-11eb-82c0-dd08278f9ea2.png)
+
+```sql
+INSERT INTO `sepe_ejercicio_01`.`autor` (`id`, `tipo`, `nombre`) VALUES ('1', 'Persona', 'Pérez-Reverte, Arturo');
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124397439-16670e80-dd10-11eb-975f-f41fd6f6224f.png)
+
+### Recuperar Autores de la BD y pasarlas a la Plantilla
+
+Vamos a modificar el controlador `AutoresController.php`.
+
+![image](https://user-images.githubusercontent.com/23094588/124397622-41059700-dd11-11eb-97d1-8712c04053b6.png)
+
+
+### Diseñar la Página de las Editoriales
+
+En la plantilla `autores/index.html.twig` poner el siguiente código:
+
+![image](https://user-images.githubusercontent.com/23094588/124397641-6c888180-dd11-11eb-989e-d060923332dd.png)
+
+### Revisar la Salida
+
+![image](https://user-images.githubusercontent.com/23094588/124397655-7f9b5180-dd11-11eb-9648-7dd106482d24.png)
+
+
+```sh
+git status
+git add .
+git commit -m "Diseñar la Página de las Autores"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124397680-b2454a00-dd11-11eb-983a-42ac71498868.png)
+
+
+## ✅ 26 Diseñar la Página de los Fondos
+
+### Meter Manualmente un Registro en la Tabla `fondo` y `fondo_autor` 
+
+#### Tabla `fondo`
+
+![image](https://user-images.githubusercontent.com/23094588/124397761-22ec6680-dd12-11eb-9311-aa9002609551.png)
+
+```sql
+INSERT INTO `sepe_ejercicio_01`.`fondo` (`id`, `editorial_id`, `titulo`, `isbn`, `edicion`, `publicacion`, `categoria`) VALUES ('1', '1', 'El sol de Breda', '84-204-8312-5', '1998', '1998', 'Novela');
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124397801-59c27c80-dd12-11eb-8ac1-09bb4e6a009f.png)
+
+#### Tabla `fondo_autor`
+
+![image](https://user-images.githubusercontent.com/23094588/124397850-a9a14380-dd12-11eb-8104-5579298c5814.png)
+
+```sql
+INSERT INTO `sepe_ejercicio_01`.`fondo_autor` (`fondo_id`, `autor_id`) VALUES ('1', '1');
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124397872-e40ae080-dd12-11eb-99cc-cdc76600682a.png)
+
+### Recuperar Fondos de la BD y pasarlas a la Plantilla
+
+Vamos a modificar el controlador `FondosController.php`.
+
+![image](https://user-images.githubusercontent.com/23094588/124398233-e53d0d00-dd14-11eb-9cb3-90dfcfb4cc01.png)
+
+
+### Diseñar la Página de las Editoriales
+
+En la plantilla `fondos/index.html.twig` poner el siguiente código:
+
+![image](https://user-images.githubusercontent.com/23094588/124398261-10276100-dd15-11eb-88d1-24ee1df92dcf.png)
+
+***Observese como se recuperan los autores al ser un array y la editorial.***
+
+### Revisar la Salida
+
+![image](https://user-images.githubusercontent.com/23094588/124398285-3f3dd280-dd15-11eb-9f0e-4383ddbc788b.png)
+
+
+```sh
+git status
+git add .
+git commit -m "Diseñar la Página de las Fondos"
+git push
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124398328-77451580-dd15-11eb-834e-10f5f0b11742.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124398359-a3609680-dd15-11eb-844a-24792067a819.png)
 
 
 
-
+## ✅ 27 
 
 
 
