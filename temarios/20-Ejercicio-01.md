@@ -1123,7 +1123,7 @@ git commit -m "Crear Entity Fondo"
 
 ![image](https://user-images.githubusercontent.com/23094588/124383439-ba2ecb00-dccc-11eb-8ef0-bac6038c1d69.png)
 
-## ✅ 22 Crear las Relaciones dentro de la Entity `Fondo`
+## ✅ 22 Crear las Relaciones dentro de la Entity `Fondo` con `Editorial` y `Autor`
 
 Para editar la Entity `Fondo` también usamos el comando `php bin/console make:entity`
 
@@ -1161,7 +1161,37 @@ Ahora vamos a añadir la propiedad `autores`
 
 ![image](https://user-images.githubusercontent.com/23094588/124384210-750c9800-dcd0-11eb-8fc1-803d56b966c6.png)
 
+![image](https://user-images.githubusercontent.com/23094588/124384243-9b323800-dcd0-11eb-8dba-c6bbf4676d0f.png)
 
+En `Fondo.php` se ha añadido lo siguiente:
+
+![image](https://user-images.githubusercontent.com/23094588/124384301-d2084e00-dcd0-11eb-8e6d-c8d09dc7949e.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124384325-ea786880-dcd0-11eb-803d-cec4bd93650e.png)
+
+Vemos que Doctrine genera un pequeño error al intentar generar el singular solo quita la `s` pero para español esto no funciona hay que hacer el arreglo manualmente.
+
+![image](https://user-images.githubusercontent.com/23094588/124384421-683c7400-dcd1-11eb-916c-dba7548b3c09.png)
+
+Estos dos métodos `addAutor` y `removeAutor` nos permite añadir o eliminar un Autor a Fondos.
+
+En `Autor.php` se ha añadido lo siguiente:
+
+![image](https://user-images.githubusercontent.com/23094588/124384560-206a1c80-dcd2-11eb-96e5-5c3a5e1da13d.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124384574-3c6dbe00-dcd2-11eb-81bc-4517180369ce.png)
+
+Aqui tambien modificamos manualmente la llamada a `addAutor` y `removeAutor` para que tengan el nombre correcto.
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Crear las Relaciones dentro de la Entity Fondo con Editorial y Autor"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124384610-7048e380-dcd2-11eb-9a23-289e0bfed045.png)
 
 
 
