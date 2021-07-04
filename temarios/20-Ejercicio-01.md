@@ -897,3 +897,4 @@ git commit -m "Crear Menú para las Opciones de Fondos, Editoriales, Autores y L
 
 ![image](https://user-images.githubusercontent.com/23094588/124377391-00bffd80-dcac-11eb-9a42-5d7199e27f71.png)
 
+![image](https://user-images.githubusercontent.com/23094588/124377457-4f6d9780-dcac-11eb-9438-7e3febc6eada.png)
