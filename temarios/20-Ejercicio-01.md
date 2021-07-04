@@ -17,6 +17,9 @@ Para realizar este proyecto se siguierón los siguientes pasos:
 * 11 Crear Controlador `About`
 * 12 Crear Controlador `Login`
 * 13 Asociar en el menú las acciones `About` y `Login` 
+* 14 Crear Controlador `Fondos`
+
+
 ## ✅ 01 Creación del Proyecto
 
 Nos colocamos en el directorio donde deseamos crear el proyecto que llamaremos "ejercicio-01"
@@ -693,5 +696,129 @@ git commit -m "Asociar en el menú las acciones About y Login"
 
 ![image](https://user-images.githubusercontent.com/23094588/124368212-207d0480-dc5f-11eb-9776-e317f4bb3cd3.png)
 
+## ✅ 14 Crear Controlador `Fondos`
+
+Vamos a crear el controlador `Fondos` con la siguiete instrucción:
+
+```sh
+php bin/console make:controller
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124375321-e84ae580-dca1-11eb-83c9-0f7843807a62.png)
+
+
+Crea los archivos `src/Controller/FondosController.php` y `templates/fondos/index.html.twig`.
+
+En `templates/fondos/index.html.twig` colocamos el siguiente código:
+
+```html
+{% extends 'base.html.twig' %}
+
+{% block title %}Fondos{% endblock %}
+
+{% block body %}
+  <main class="container py-4">
+    <h1 class="text-center">Fondos</h1>
+  </main>
+{% endblock %}
+```
+
+Al invocar el URL http://localhost:8000/fondos nos pinta:
+
+![image](https://user-images.githubusercontent.com/23094588/124375668-ac188480-dca3-11eb-9532-7c651ae28e13.png)
+
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Crear Controlador Fondos"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124375735-031e5980-dca4-11eb-90d0-8e8ebd288a97.png)
+
+
+## ✅ 15 Crear Controlador `Editoriales`
+
+Vamos a crear el controlador `Editoriales` con la siguiete instrucción:
+
+```sh
+php bin/console make:controller
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124375835-64dec380-dca4-11eb-8752-9706d78f96e3.png)
+
+Crea los archivos `src/Controller/EditorialesController.php` y `templates/editoriales/index.html.twig`.
+
+En `templates/editoriales/index.html.twig` colocamos el siguiente código:
+
+```html
+{% extends 'base.html.twig' %}
+
+{% block title %}Editoriales{% endblock %}
+
+{% block body %}
+  <main class="container py-4">
+    <h1 class="text-center">Editoriales</h1>
+  </main>
+{% endblock %}
+```
+
+Al invocar el URL http://localhost:8000/editoriales nos pinta:
+
+![image](https://user-images.githubusercontent.com/23094588/124375922-ca32b480-dca4-11eb-8a9e-8f4c146e045c.png)
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Editoriales"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124375945-ecc4cd80-dca4-11eb-88cb-2627a281bb5f.png)
+
+## ✅ 16 Crear Controlador `Autores`
+
+Vamos a crear el controlador `Autores` con la siguiete instrucción:
+
+```sh
+php bin/console make:controller
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124375982-10881380-dca5-11eb-8ff0-3eac1e05d291.png)
+
+
+Crea los archivos `src/Controller/AutoresController.php` y `templates/autores/index.html.twig`.
+
+En `templates/autores/index.html.twig` colocamos el siguiente código:
+
+```html
+{% extends 'base.html.twig' %}
+
+{% block title %}Autores{% endblock %}
+
+{% block body %}
+  <main class="container py-4">
+    <h1 class="text-center">Autores</h1>
+  </main>
+{% endblock %}
+```
+
+Al invocar el URL http://localhost:8000/autores nos pinta:
+
+![image](https://user-images.githubusercontent.com/23094588/124376050-580e9f80-dca5-11eb-8bc9-d91a2b6ce04d.png)
+
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Crear Controlador Autores"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124376092-91dfa600-dca5-11eb-8da3-a047fbcdf292.png)
 
 
