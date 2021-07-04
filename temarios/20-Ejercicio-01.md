@@ -924,21 +924,26 @@ Nuestra aplicacíon va a usar las siguientes tablas con las relaciones que se in
 > 
 > DOCTRINE Propone que las tablas no se creen a mano, 
 
-> **DOCTRINE**
->
-> DOCTRINE es un **ORM** - Object Relational Mapper
-> Mapea objeto de PHP con tablas de la BD.
-> DOCTRINE nos dice que no debemos pensar en las tablas, por que condicionamos nuestra programación a las tablas creadas.
-> DOCTRINE nos dice piensa en las clases que deseas tener 
-> 
-> `class Editorial {`
-> `   private int $id`
-> `   private string $nombre;`
-> `   public function getNombre() {`
-> `      return $this->nombre;`
-> `   }`
-> `   `
-> `   public function setNombre($nombre) {`
-> `      $this->nombre = nombre;`
-> `   }`
-> `}`
+**DOCTRINE**
+
+DOCTRINE es un **ORM** - Object Relational Mapper
+Mapea objeto de PHP con tablas de la BD.
+DOCTRINE nos dice que NO debemos pensar en las tablas, por que condicionamos nuestra programación a las tablas creadas.
+DOCTRINE nos dice piensa en las clases que deseas tener, por ejemplo:
+
+```php
+class Editorial {
+   
+   private int $id
+   private string $nombre;
+   
+   public function getNombre() {
+      return $this->nombre;
+   }`
+
+  public function setNombre($nombre) {
+      $this->nombre = nombre;
+   }
+   
+}
+```
