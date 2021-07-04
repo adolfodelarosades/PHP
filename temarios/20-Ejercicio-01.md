@@ -920,16 +920,18 @@ Nuestra aplicacíon va a usar las siguientes tablas con las relaciones que se in
 * 1 fondo tiene N autores
 * 1 autor ha escrito N fondos    Relación N - N (Many To Many)
 
-> **NOTA**
-> 
-> DOCTRINE Propone que las tablas no se creen a mano, 
-
 **DOCTRINE**
 
-DOCTRINE es un **ORM** - Object Relational Mapper
-Mapea objeto de PHP con tablas de la BD.
-DOCTRINE nos dice que NO debemos pensar en las tablas, por que condicionamos nuestra programación a las tablas creadas.
-DOCTRINE nos dice piensa en las clases que deseas tener, por ejemplo:
+* DOCTRINE es un **ORM** - Object Relational Mapper
+* Mapea objeto de PHP con tablas de la BD.
+* DOCTRINE Propone que las tablas no se creen a mano.
+* DOCTRINE nos dice que NO debemos pensar en las tablas, por que condicionamos nuestra programación a las tablas creadas.
+* DOCTRINE nos dice piensa en las clases que deseas tener, por ejemplo:
+* DOCTRINE nos dice diseña las clases que yo me encargare de crear una BD capaz de persistir o representar a esas clases que has diseñado. (CUESTA MUCHO)
+* Es bueno crear un Diagrama UML de Clases para ver la representación de las clases involucradas.
+* DOCTRINE llama a estas clases **ENTIDADES** **ENTITY**, las cuales se van a almacenar en la carpeta `Entity` de nuestra APP que por ahora se mantiene vacía.
+* Para crear Entidades se usa el comando `php bin/console make:entity`
+
 
 ```php
 class Editorial {
@@ -947,3 +949,122 @@ class Editorial {
    
 }
 ```
+
+```php
+class Autor {
+   
+   private int $id
+   private string $tipo;
+   private string $nombre;
+   
+   private $fondos //array de fondos
+   
+   public function getFondos();
+   
+   //Todos los getters y setters
+   
+}
+```
+
+Con esto podríamos recuperar todos los fondos de un Autor con:
+
+```php
+...
+$fondosDelAutor = $autor->getFondos();
+...
+```
+
+```php
+class Fondo {
+   
+   private int $id
+   private string $titulo;
+   private string $isbn;
+   private int edicion;
+   private int publicacion;
+   private string categoria
+   
+   private Editorial $editorial;
+   private Autores[] $autores //array de autores
+   
+   
+   //Todos los getters y setters
+   
+}
+```
+
+Podemos desear tener :
+
+```php
+...
+$fondo->getTitulo();
+$fondo->getAutores();
+$miEditorial = $fondo->getEditorial();
+$nombreEditorial = $fondo->getEditorial()->getNombre();
+...
+```
+
+
+## ✅ 19 Crear Entity  `Autor`
+
+Vamos a usar el comando `php bin/console make:entity`:
+
+![image](https://user-images.githubusercontent.com/23094588/124381401-a54d3a00-dcc2-11eb-9e4c-e60d634d39ce.png)
+
+Lo primero que nos pregunta es el nombre de la entidad, en este caso es `Autor`.
+
+En este momento ya se crear los archivos `src/Entity/Autor.php` y `src/Repository/AutorRepository.php`.
+
+![image](https://user-images.githubusercontent.com/23094588/124381468-096ffe00-dcc3-11eb-8f04-993a281e0804.png)
+
+Por un lado nos crea la Entidad `src/Entity/Autor.php` a la cual ya le pone por defecto el campo `$id`:
+
+![image](https://user-images.githubusercontent.com/23094588/124381538-64a1f080-dcc3-11eb-8b23-28445de0fa79.png)
+
+
+Pero el comando no ha terminado, nos permite añadir los campos que necesitemos:
+
+```sh
+Entity generated! Now let's add some fields!
+You can always add more fields later manually or by re-running this command.
+```
+
+Podemos seguir añadiendo algunos campos ahora mismo o si lo preferimos podemos añadirlos manualmente(expertos) o volver a ejecutar el comando `php bin/console make:entity` para editar la entidad existente mediante el asistente. En este caso vamos a añadir los campos que habíamos definido para la Entidad `Autor`, empezamos por `tipo`:
+
+![image](https://user-images.githubusercontent.com/23094588/124381980-6e2c5800-dcc5-11eb-957b-ea12c03f75cd.png)
+
+Nos pide **nombre de la propiedad**, **tipo** sino lo conocemos podemos pulsar **`?`** para que nos indique todos los tipos posibles, **tamaño** y si es **nulable**. Nos suguiere las opciones y si estamos de acuerdo basta dar Enter o podemos cambiarla por la que deseemos. Una vez contestadas estas cuatro preguntas se acttualiza la Entidad `updated: src/Entity/Autor.php`
+
+![image](https://user-images.githubusercontent.com/23094588/124382115-14785d80-dcc6-11eb-813a-b8e980cfc4cc.png)
+
+Pero el comando aún no termina, nos pregunta que otra propiedad queremos ingresar. Empezamos de nuevo para añadir `nombre`.
+
+![image](https://user-images.githubusercontent.com/23094588/124382193-7afd7b80-dcc6-11eb-9763-cba439c9aa8a.png)
+
+Como ya no queremos añadir nada mas simplemente pulsamos Enter.
+
+![image](https://user-images.githubusercontent.com/23094588/124382225-9e282b00-dcc6-11eb-9008-7902ee6f56ea.png)
+
+
+Ahora si el comando termina.
+
+Y por ahora ya tenemos nuestra entidad `Autor`.
+
+![image](https://user-images.githubusercontent.com/23094588/124382284-e9423e00-dcc6-11eb-85fe-9db68af2eaf6.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
