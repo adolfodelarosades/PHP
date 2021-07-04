@@ -1194,6 +1194,61 @@ git commit -m "Crear las Relaciones dentro de la Entity Fondo con Editorial y Au
 ![image](https://user-images.githubusercontent.com/23094588/124384610-7048e380-dcd2-11eb-9a23-289e0bfed045.png)
 
 
+## ✅ 23 Realizar las Migration para crear la BD en base a las Entidades existentes
+
+Una vez que ya tenemos las entidades debemos ejecutar el comando:
+
+```sh
+php bin/console make:migration
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124395807-8bcde180-dd06-11eb-9838-7d4568453dc6.png)
+
+Este comando nos crea el archivo `migrations/Version20210704182911.php` 
+
+![image](https://user-images.githubusercontent.com/23094588/124395849-c0419d80-dd06-11eb-84fc-531b3aed369e.png)
+
+el cual contiene el siguiente código:
+
+![image](https://user-images.githubusercontent.com/23094588/124395880-ec5d1e80-dd06-11eb-91ae-3095f9729755.png)
+![image](https://user-images.githubusercontent.com/23094588/124395896-fe3ec180-dd06-11eb-917c-c229cbf33221.png)
+
+Como podemos observar tiene dos métodos o funciones:
+
+* `public function up(Schema $schema): void`: Contiene las instrucciones SQL que se ejecutar al realizar el comando para crear o modificar la BD.
+* `public function down(Schema $schema): void`: Contiene las instrucciones SQL que se ejecutar para desacer los cambios si ejecutamos el método anterior.
+
+
+Como vemos en la consola para continuar nos suguiere ejecutar el comando:
+
+
+```sh
+php bin/console doctrine:migrations:migrate
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124396047-af455c00-dd07-11eb-95fc-df883eef537c.png)
+
+Nos advierte que si ejecutamos el comando los datos existentes se pueden perder, como no tenemos nada lo ejecutamos.
+
+Este comando hace el mapeo de las Entidades que tenemos a tablas de la BD, si revisamos la BD tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/124396105-fd5a5f80-dd07-11eb-8925-89199ef17299.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124396180-532f0780-dd08-11eb-8af4-1a2d8c88dbb0.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124396233-912c2b80-dd08-11eb-89a7-4246c1e625e8.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124396247-a99c4600-dd08-11eb-9207-faf594a1de2a.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124396195-6215ba00-dd08-11eb-9f71-e6d9043a775b.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124396201-735ec680-dd08-11eb-8800-06b6602849e7.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124396224-82de0f80-dd08-11eb-8e33-8bbfbf0201b9.png)
+
+
+
+
 
 
 
