@@ -901,3 +901,44 @@ git commit -m "Crear Menú para las Opciones de Fondos, Editoriales, Autores y L
 ![image](https://user-images.githubusercontent.com/23094588/124377391-00bffd80-dcac-11eb-9a42-5d7199e27f71.png)
 
 ![image](https://user-images.githubusercontent.com/23094588/124377457-4f6d9780-dcac-11eb-9438-7e3febc6eada.png)
+
+## ✅ 18 Explicación de BD necesaria
+
+Nuestra aplicacíon va a usar las siguientes tablas con las relaciones que se indican.
+
+### Tablas
+
+* **Tabla Fondo** (titulo, isbn, edicion, publicacion, categoria)
+* **Tabla Autor** (nombre, tipo)
+* **Tabla Editorial** (nombre)
+
+### Relaciones
+
+* 1 fondo tiene 1 editorial
+* 1 editorial tiene N fondos     Relación 1 - N (One To Many)
+
+* 1 fondo tiene N autores
+* 1 autor ha escrito N fondos    Relación N - N (Many To Many)
+
+> **NOTA**
+> 
+> DOCTRINE Propone que las tablas no se creen a mano, 
+
+> **DOCTRINE**
+>
+> DOCTRINE es un **ORM** - Object Relational Mapper
+> Mapea objeto de PHP con tablas de la BD.
+> DOCTRINE nos dice que no debemos pensar en las tablas, por que condicionamos nuestra programación a las tablas creadas.
+> DOCTRINE nos dice piensa en las clases que deseas tener 
+> 
+> `class Editorial {`
+> `   private int $id`
+> `   private string $nombre;`
+> `   public function getNombre() {`
+> `      return $this->nombre;`
+> `   }`
+> `   `
+> `   public function setNombre($nombre) {`
+> `      $this->nombre = nombre;`
+> `   }`
+> `}`
