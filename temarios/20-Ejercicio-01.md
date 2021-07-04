@@ -1123,6 +1123,47 @@ git commit -m "Crear Entity Fondo"
 
 ![image](https://user-images.githubusercontent.com/23094588/124383439-ba2ecb00-dccc-11eb-8ef0-bac6038c1d69.png)
 
+## ✅ 22 Crear las Relaciones dentro de la Entity `Fondo`
+
+Para editar la Entity `Fondo` también usamos el comando `php bin/console make:entity`
+
+Empezamos añadiendo la Propiedad `Editorial`
+
+![image](https://user-images.githubusercontent.com/23094588/124383604-a768c600-dccd-11eb-8bb9-3b9e103623c8.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124383615-b3548800-dccd-11eb-9ceb-8a332dab7cc6.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124383722-4db4cb80-dcce-11eb-8492-f729430c0485.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124383770-89e82c00-dcce-11eb-9da5-d1accaf180c0.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124383842-dc294d00-dcce-11eb-8e6e-fe85965246e0.png)
+
+En `Fondo.php` se ha añadido lo siguiente:
+
+![image](https://user-images.githubusercontent.com/23094588/124383888-1a267100-dccf-11eb-91b8-92560e6382b5.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124383898-290d2380-dccf-11eb-9c0d-87ea0c2f7f3d.png)
+
+Y en `Editorial.php` se ha añadido lo siguiente:
+
+![image](https://user-images.githubusercontent.com/23094588/124383958-8b662400-dccf-11eb-9900-0362154a2884.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124383991-a8025c00-dccf-11eb-9618-ae59db1c5656.png)
+
+
+
+Ahora vamos a añadir la propiedad `autores`
+
+![image](https://user-images.githubusercontent.com/23094588/124384112-2bbc4880-dcd0-11eb-9eec-6aa55383ef4a.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124384127-34148380-dcd0-11eb-9bbe-4fdb41c3ac9f.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124384210-750c9800-dcd0-11eb-8fc1-803d56b966c6.png)
+
+
+
+
 
 
 
