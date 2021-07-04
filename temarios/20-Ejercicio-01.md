@@ -18,6 +18,9 @@ Para realizar este proyecto se siguierón los siguientes pasos:
 * 12 Crear Controlador `Login`
 * 13 Asociar en el menú las acciones `About` y `Login` 
 * 14 Crear Controlador `Fondos`
+* 15 Crear Controlador `Editoriales`
+* 16 Crear Controlador `Autores`
+* 17 Crear Menú para las Opciones de `Fondos`, `Editoriales` y `Autores`
 
 
 ## ✅ 01 Creación del Proyecto
