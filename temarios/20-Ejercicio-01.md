@@ -1052,6 +1052,87 @@ Y por ahora ya tenemos nuestra entidad `Autor`.
 
 ![image](https://user-images.githubusercontent.com/23094588/124382284-e9423e00-dcc6-11eb-85fe-9db68af2eaf6.png)
 
+**NOTA**
+
+Nos suguiere ejecutar el comando `php bin/console make:migration` para crear la tabla en la BD, pero vamos a esperar a crear las demás entidades para ejecutarlo.
+
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Crear Entity Autor"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124382355-4d650200-dcc7-11eb-8a43-6f8bf7c0a14a.png)
+
+
+## ✅ 20 Crear Entity  `Editorial`
+
+Usamos el comando `php bin/console make:entity`
+
+![image](https://user-images.githubusercontent.com/23094588/124382929-278d2c80-dcca-11eb-8de2-3a731896a967.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124382946-3bd12980-dcca-11eb-9a10-e6e9c5f6aaac.png)
+
+Hemos creado la Entidad `Editorial`
+
+![image](https://user-images.githubusercontent.com/23094588/124382980-63c08d00-dcca-11eb-8504-d083836d4162.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/124382993-7b981100-dcca-11eb-8897-e5d0113bef15.png)
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Crear Entity Editorial"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124383081-e1849880-dcca-11eb-9ee9-94362be2bb88.png)
+
+## ✅ 21 Crear Entity  `Fondo`
+
+Usamos el comando `php bin/console make:entity`
+
+![image](https://user-images.githubusercontent.com/23094588/124383183-493ae380-dccb-11eb-9f4b-b7d53959a8d6.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124383223-98811400-dccb-11eb-85ae-f2a3aac89039.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124383273-ea299e80-dccb-11eb-90e4-5505a0bb117f.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124383307-19401000-dccc-11eb-940e-012e02cf0ac6.png)
+
+Hemos creado la Entidad `Fondo`
+
+![image](https://user-images.githubusercontent.com/23094588/124383342-47255480-dccc-11eb-8eea-c128f1ecbcf4.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124383383-7340d580-dccc-11eb-8993-74162fd5cd67.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124383405-8eabe080-dccc-11eb-9896-535dbdb2aa0a.png)
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Crear Entity Fondo"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124383439-ba2ecb00-dccc-11eb-8ef0-bac6038c1d69.png)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
