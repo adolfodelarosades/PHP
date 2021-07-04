@@ -822,3 +822,78 @@ git commit -m "Crear Controlador Autores"
 ![image](https://user-images.githubusercontent.com/23094588/124376092-91dfa600-dca5-11eb-8da3-a047fbcdf292.png)
 
 
+## ✅ 17 Crear Menú para las Opciones de `Fondos`, `Editoriales` y `Autores`
+
+* En la carpeta `templates/comunes` crear la plantilla `_menu.html.twig` con el siguiente código:
+
+```html
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img src="{{ asset('images/fondos-01.png')}}" width="50px"/><a class="navbar-brand" href="{{ path('fondos')}}"> F O N D O S</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('fondos')}}">Fondos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('editoriales')}}">Editoriales</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('autores')}}">Autores</a>
+      </li>
+    </ul>
+    <form class="form-inline" action="{{path('root')}}">
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Logout</button>
+  </form>
+  </div>
+</nav>
+```
+
+* Añadir en `public/images` la imagen `fondos-01.png` 
+
+* Añadir en las plantilla de Fondos, Editoriales y Autores la llamada a  `_menu.html.twig` con:
+
+```html
+{{ include('comunes/_menu.html.twig') }}  
+```
+
+* Añadir en el Login la llamada a Fondos a presionar el botón. (Aún no validamos los valores introducidos)
+
+   ```html
+   ...
+   <a class="btn btn-secondary" href="{{ path('fondos')}}">Login</a>
+   ...
+   ```
+
+* Probar todo el flujo de los menús en  http://localhost:8000/ 
+
+   
+![image](https://user-images.githubusercontent.com/23094588/124377228-429c7400-dcab-11eb-9926-3e80827f8fa8.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124377240-53e58080-dcab-11eb-9438-7422f7a6c760.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124377273-77103000-dcab-11eb-9139-f1f583de1a88.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124377287-87c0a600-dcab-11eb-8381-f686a42fca73.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124377306-9c9d3980-dcab-11eb-8c52-2f9068cf5a1d.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124377318-af177300-dcab-11eb-95d4-43cbd20473d7.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124377341-c35b7000-dcab-11eb-866b-c8302a8ca30f.png)
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Crear Menú para las Opciones de Fondos, Editoriales, Autores y Logout"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124377367-dec67b00-dcab-11eb-9ced-15b24657c913.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124377391-00bffd80-dcac-11eb-9a42-5d7199e27f71.png)
+
