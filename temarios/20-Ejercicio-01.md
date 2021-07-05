@@ -1487,9 +1487,35 @@ git commit -m "Crear Detalle de Editoriales"
 ![image](https://user-images.githubusercontent.com/23094588/124403633-ac625f80-dd37-11eb-9c99-ea43cdfd8fd3.png)
 
 
-## ✅ 28 Crear Detalle de Autores
+## ✅ 28 Eliminar una Editorial
+
+### Modificar el Controlador `src/Controller/EditorialesController.php`.
 
 
+![image](https://user-images.githubusercontent.com/23094588/124473103-3396ee00-dd9f-11eb-9606-4cd2b4516561.png)
+
+También cambiamos el nombre de un método 
+
+![image](https://user-images.githubusercontent.com/23094588/124473226-5923f780-dd9f-11eb-8e26-b47a0ef39845.png)
+
+### Modificar la Plantlla `templates/editoriales/index.html.twig`
+
+Añadimos la opción de Eliminar llamando a la Acción correspondiente:
+
+![image](https://user-images.githubusercontent.com/23094588/124473510-b5871700-dd9f-11eb-8eb1-13c34023e23b.png)
+
+
+### Prueba de la Salida
+
+![image](https://user-images.githubusercontent.com/23094588/124473786-0434b100-dda0-11eb-861a-f4c3e6803511.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124473834-14e52700-dda0-11eb-9c57-35ffef054e1d.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124473896-275f6080-dda0-11eb-90c6-2fbc10fc7f99.png)
+
+Y si llamo al URL manualmente por ejemplo `http://localhost:8000/editoriales/2/borrar` tengo:
+
+![image](https://user-images.githubusercontent.com/23094588/124474018-4d850080-dda0-11eb-931e-7f5ae212df4a.png)
 
 
 
