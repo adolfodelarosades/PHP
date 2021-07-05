@@ -1534,6 +1534,66 @@ git commit -m "Eliminar una Editorial"
 
 ## ✅ 29 Crear una Nueva Editorial
 
+Para crear una nueva Editorial seguimos los siguientes pasos.
+
+### Modificar el Controlador `src/Controller/EditorialesController.php`
+
+Añadimos los siguientes métodos:
+
+![image](https://user-images.githubusercontent.com/23094588/124494237-e161c700-ddb6-11eb-8b33-ad7c1d47bdc6.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124494363-09512a80-ddb7-11eb-9977-fc73600401f8.png)
+
+**EL ORDEN EN QUE COLOCAMOS LAS ACCIONES IMPORTA** En este caso si estas dos rutas las ponemos después de:
+
+![image](https://user-images.githubusercontent.com/23094588/124494513-369dd880-ddb7-11eb-92d9-be2d31ce2afc.png)
+
+Nunca entraran en NUEVA o CREATE por que la estructura de la ruta es la misma.
+
+### Modificar la plantilla `templates/editoriales/index.html.twig`
+
+![image](https://user-images.githubusercontent.com/23094588/124494783-81b7eb80-ddb7-11eb-9b68-338f52cac0cd.png)
+
+
+### Crear la Nueva Plantilla `templates/editoriales/nueva.html.twig`
+
+![image](https://user-images.githubusercontent.com/23094588/124494882-ab711280-ddb7-11eb-8a54-8b9855f5f844.png)
+
+
+### Salida de Pantallas
+
+![image](https://user-images.githubusercontent.com/23094588/124495098-f5f28f00-ddb7-11eb-8fb6-7b1626e3b1da.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/124495150-0acf2280-ddb8-11eb-8221-76fa5754876a.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124495223-23d7d380-ddb8-11eb-8dfd-3f1d8ec2a055.png)
+
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Crear una Nueva Editorial"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124495367-4ff35480-ddb8-11eb-8fc5-f9a60fc26450.png)
+
+## ✅ 30 Modificar una Entidad
+
+Vamos a hacer la funcionalidad de modificar una Entidad.
+
+![image](https://user-images.githubusercontent.com/23094588/124496828-3e12b100-ddba-11eb-9d5e-b078505ab197.png)
+
+
+
+
+
+
+
+
+
 
 
 
