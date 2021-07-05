@@ -1603,6 +1603,11 @@ Añadimos los siguientes métodos:
 
 ### Salida de Pantallas
 
+![image](https://user-images.githubusercontent.com/23094588/124501094-3dc9e400-ddc1-11eb-8788-be56d6433eb5.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124501218-6f42af80-ddc1-11eb-9ccd-65dce3fe0b99.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124501264-81245280-ddc1-11eb-8d26-966df5966c5d.png)
 
 
 :eight_pointed_black_star: Subir a GIT
@@ -1613,7 +1618,8 @@ git add .
 git commit -m "Modificar una Editorial"
 ```
 
-![image](https://user-images.githubusercontent.com/23094588/124495367-4ff35480-ddb8-11eb-8fc5-f9a60fc26450.png)
+![image](https://user-images.githubusercontent.com/23094588/124501307-97caa980-ddc1-11eb-82b5-76fe1c50e958.png)
+
 
 ## ✅ 31 
 
