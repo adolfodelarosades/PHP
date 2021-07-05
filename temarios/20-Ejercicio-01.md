@@ -1580,9 +1580,43 @@ git commit -m "Crear una Nueva Editorial"
 
 ![image](https://user-images.githubusercontent.com/23094588/124495367-4ff35480-ddb8-11eb-8fc5-f9a60fc26450.png)
 
-## ✅ 30 Modificar una Entidad
+## ✅ 30 Modificar una Editorial
 
-Vamos a hacer la funcionalidad de modificar una Entidad.
+Vamos a hacer la funcionalidad de modificar una Editorial.
+
+### Modificar el Controlador `src/Controller/EditorialesController.php`
+
+Añadimos los siguientes métodos:
+
+![image](https://user-images.githubusercontent.com/23094588/124500605-5be31480-ddc0-11eb-9a5b-eac864a23d13.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124500720-8af98600-ddc0-11eb-99bd-453e76578bd9.png)
+
+### Modificar la plantilla `templates/editoriales/index.html.twig`
+
+![image](https://user-images.githubusercontent.com/23094588/124500815-b8deca80-ddc0-11eb-9854-db855852f4c0.png)
+
+
+### Crear la Nueva Plantilla `templates/editoriales/nueva.html.twig`
+
+![image](https://user-images.githubusercontent.com/23094588/124500885-d7dd5c80-ddc0-11eb-91e3-52fa91989fa9.png)
+
+### Salida de Pantallas
+
+
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Modificar una Editorial"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124495367-4ff35480-ddb8-11eb-8fc5-f9a60fc26450.png)
+
+## ✅ 31 
+
 
 ![image](https://user-images.githubusercontent.com/23094588/124496828-3e12b100-ddba-11eb-9d5e-b078505ab197.png)
 
