@@ -1336,6 +1336,7 @@ En la plantilla `autores/index.html.twig` poner el siguiente código:
 
 ![image](https://user-images.githubusercontent.com/23094588/124397655-7f9b5180-dd11-11eb-9648-7dd106482d24.png)
 
+:eight_pointed_black_star: Subir a GIT
 
 ```sh
 git status
@@ -1389,6 +1390,7 @@ En la plantilla `fondos/index.html.twig` poner el siguiente código:
 
 ![image](https://user-images.githubusercontent.com/23094588/124398285-3f3dd280-dd15-11eb-9f0e-4383ddbc788b.png)
 
+:eight_pointed_black_star: Subir a GIT
 
 ```sh
 git status
@@ -1477,6 +1479,7 @@ Estamos llamando a la acción `editorial_detalle` definida en el controlador pas
 
 ![image](https://user-images.githubusercontent.com/23094588/124403563-60afb600-dd37-11eb-93a4-d788d890a55c.png)
 
+:eight_pointed_black_star: Subir a GIT
 
 ```sh
 git status
@@ -1516,6 +1519,22 @@ Añadimos la opción de Eliminar llamando a la Acción correspondiente:
 Y si llamo al URL manualmente por ejemplo `http://localhost:8000/editoriales/2/borrar` tengo:
 
 ![image](https://user-images.githubusercontent.com/23094588/124474018-4d850080-dda0-11eb-931e-7f5ae212df4a.png)
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "Eliminar una Editorial"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124481544-ad7fa500-dda8-11eb-9961-711c098dc39a.png)
+
+
+
+## ✅ 29 Crear una Nueva Editorial
+
+
 
 
 
