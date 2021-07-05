@@ -1621,37 +1621,95 @@ git commit -m "Modificar una Editorial"
 ![image](https://user-images.githubusercontent.com/23094588/124501307-97caa980-ddc1-11eb-82b5-76fe1c50e958.png)
 
 
-## ✅ 31 
+## ✅ 31 CRUD Autores
+
+OJO NO DA DE ALTA PERO NO MUESTRA ERRORES.
+
+### Crear Acciones en Controlador
+
+```sh
+src/Controller/AutoresController.php
+```
+
+### Modificar Plantilla 
+
+```sh
+templates/autores/index.html.twig
+```
+
+### Crear Plantillas Nuevas 
+
+```sh
+templates/autores/detalle.html.twig
+templates/autores/modificar.html.twig
+templates/autores/nueva.html.twig
+```
+
+### Salida
+
+![image](https://user-images.githubusercontent.com/23094588/124513074-3c58e580-ddda-11eb-815a-6fc354942d14.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124513262-b12c1f80-ddda-11eb-8428-f0289009c7a6.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124513901-1a606280-dddc-11eb-82ee-03d8adce33d0.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124513993-4d0a5b00-dddc-11eb-9a27-1be8bc8229f2.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124514018-5c89a400-dddc-11eb-8d28-55705e5b841c.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124514060-79be7280-dddc-11eb-9d8d-0bf0dba8bfc1.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124514082-89d65200-dddc-11eb-962a-1f28b122ac7b.png)
 
 
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "CRUD Autores"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124514235-d6219200-dddc-11eb-81c3-91a0283b9e6c.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124514387-2ef12a80-dddd-11eb-848d-d3d221c721fe.png)
+
+
+## ✅ 32 CRUD Fondos
+
+### Crear Acciones en Controlador
+
+```sh
+
+```
+
+### Modificar Plantilla 
+
+```sh
+
+```
+
+### Crear Plantillas Nuevas 
+
+```sh
+
+```
+
+### Salida
+
+:eight_pointed_black_star: Subir a GIT
+
+```sh
+git status
+git add .
+git commit -m "CRUD Fondos"
+```
+
+
+
+
+
+
+OTRA.
 ![image](https://user-images.githubusercontent.com/23094588/124496828-3e12b100-ddba-11eb-9d5e-b078505ab197.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
