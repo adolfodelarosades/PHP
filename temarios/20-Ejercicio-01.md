@@ -1403,10 +1403,91 @@ git push
 
 
 
-## ✅ 27 
+## ✅ 27 Crear Detalle de Editoriales
 
 
+### Modificar Controlador
 
+Modificamos el Controlador `src/Controller/EditorialesController.php` para añadir una nueva acción para que pinte el detalle de la Editorial seleccionada.
+
+![image](https://user-images.githubusercontent.com/23094588/124403026-3c9ea580-dd34-11eb-9298-5a78eb65b976.png)
+
+
+```php
+    /**
+     * @Route("/editoriales/{id}", name="editorial_detalle")
+     */
+    public function ver($id, EditorialRepository $editorialRepository): Response
+    {
+        $editorial = $editorialRepository->find($id);
+        
+        if(!$editorial) {
+            return $this->render('comunes/recurso-no-encontrado.html.twig', [
+                'mensaje' => 'Esta Editorial no existe.'
+            ]);
+        }
+
+        return $this->render('editoriales/detalle.html.twig', [
+            'editorial' => $editorial
+        ]);
+    }
+```
+
+### Añadir Font Awesome
+
+En la plantilla `templates/base.html.twig` vamos a añadir Font Awesome
+
+![image](https://user-images.githubusercontent.com/23094588/124403076-acad2b80-dd34-11eb-92b8-c5fbb1247f0a.png)
+
+Añadimos la línea:
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+```
+
+### Añadir Icono para llamar al Detalle de la Editorial
+
+Modificamos `templates/editoriales/index.html.twig`
+
+![image](https://user-images.githubusercontent.com/23094588/124403126-0c0b3b80-dd35-11eb-8f52-d656c1836c35.png)
+
+La línea con el icono es:
+
+```html
+<td><a class="nav-link" href="{{ path('editorial_detalle', {id: editorial.id}) }}"><i class="fa fa-search" style="font-size:24px;color:grey;"></i></a></td>
+```
+
+Estamos llamando a la acción `editorial_detalle` definida en el controlador pasandole el parámetro `editorial.id`.
+
+### Crear la nueva plantilla `editoriales/detalle.html.twig`
+
+
+![image](https://user-images.githubusercontent.com/23094588/124403233-95227280-dd35-11eb-8dfa-41aa02befff8.png)
+
+### Crear la nueva plantilla `comunes/recurso-no-encontrado.html.twig`
+
+
+![image](https://user-images.githubusercontent.com/23094588/124403486-fdbe1f00-dd36-11eb-91bc-93974d808ec2.png)
+
+### Probar el Flujo de Editoriales
+
+![image](https://user-images.githubusercontent.com/23094588/124403501-162e3980-dd37-11eb-8e11-c3dcd40f82fe.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124403510-28a87300-dd37-11eb-8099-73717d0b193f.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124403563-60afb600-dd37-11eb-93a4-d788d890a55c.png)
+
+
+```sh
+git status
+git add .
+git commit -m "Crear Detalle de Editoriales"
+```
+
+![image](https://user-images.githubusercontent.com/23094588/124403633-ac625f80-dd37-11eb-9c99-ea43cdfd8fd3.png)
+
+
+## ✅ 28 Crear Detalle de Autores
 
 
 
