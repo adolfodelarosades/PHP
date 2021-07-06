@@ -2,7 +2,7 @@
 
 REFERENCIA DEL PROFE: https://carherco.es/ejercicio-2021-07-02/public/
 
-REPOSITORIO DE ESTE CÓDIGO: https://github.com/adolfodelarosades/COD-Symphony-5-Ejercicio-01
+**REPOSITORIO DE ESTE CÓDIGO**: https://github.com/adolfodelarosades/COD-Symphony-5-Ejercicio-01
 
 Para realizar este proyecto se siguierón los siguientes pasos:
 
