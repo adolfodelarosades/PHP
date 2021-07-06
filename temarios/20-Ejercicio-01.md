@@ -1,6 +1,8 @@
 # Ejercicio 01 Creación de CRUD para la Gestión de Fondos.
 
-https://carherco.es/ejercicio-2021-07-02/public/
+REFERENCIA DEL PROFE: https://carherco.es/ejercicio-2021-07-02/public/
+
+REPOSITORIO DE ESTE CÓDIGO: https://github.com/adolfodelarosades/COD-Symphony-5-Ejercicio-01
 
 Para realizar este proyecto se siguierón los siguientes pasos:
 
@@ -21,7 +23,21 @@ Para realizar este proyecto se siguierón los siguientes pasos:
 * 15 Crear Controlador `Editoriales`
 * 16 Crear Controlador `Autores`
 * 17 Crear Menú para las Opciones de `Fondos`, `Editoriales` y `Autores`
-
+* 18 Explicación de BD necesaria
+* 19 Crear Entity  `Autor`
+* 20 Crear Entity  `Editorial`
+* 21 Crear Entity  `Fondo`
+* 22 Crear las Relaciones dentro de la Entity `Fondo` con `Editorial` y `Autor`
+* 23 Realizar las Migration para crear la BD en base a las Entidades existentes
+* 24 Diseñar la Página de las Editoriales
+* 25 Diseñar la Página de los Autores
+* 26 Diseñar la Página de los Fondos
+* 27 Crear Detalle de Editoriales
+* 28 Eliminar una Editorial
+* 29 Crear una Nueva Editorial
+* 30 Modificar una Editorial
+* 31 CRUD Autores (Pasos 24 - 29)
+* 32 CRUD Fondos (Pasos 24 - 29)
 
 ## ✅ 01 Creación del Proyecto
 
