@@ -1680,22 +1680,39 @@ git commit -m "CRUD Autores"
 ### Crear Acciones en Controlador
 
 ```sh
-
+src/Controller/FondosController.php
 ```
 
-### Modificar Plantilla 
+### Se añadio un método para borrar los autores pertencientes al Fondo en 
 
 ```sh
+src/Entity/Fondo.php
+```
 
+### Modificar Plantilla para añadir opciones del CRUD
+
+```sh
+templates/fondos/index.html.twig
 ```
 
 ### Crear Plantillas Nuevas 
 
 ```sh
-
+templates/fondos/detalle.html.twig
+templates/fondos/modificar.html.twig
+templates/fondos/nueva.html.twig
 ```
 
 ### Salida
+
+![image](https://user-images.githubusercontent.com/23094588/124581602-892bd300-de51-11eb-80ea-de98ed08b978.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124582267-2b4bbb00-de52-11eb-9ea3-490fd4fb601d.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124582647-7e257280-de52-11eb-84f4-07d5a77e98a1.png)
+
+![image](https://user-images.githubusercontent.com/23094588/124582898-c0e74a80-de52-11eb-961c-0c5e737bb204.png)
+
 
 :eight_pointed_black_star: Subir a GIT
 
@@ -1705,65 +1722,8 @@ git add .
 git commit -m "CRUD Fondos"
 ```
 
+![image](https://user-images.githubusercontent.com/23094588/124583317-34895780-de53-11eb-8bb8-13ab949a38f7.png)
 
-
-
-
-
-OTRA.
-![image](https://user-images.githubusercontent.com/23094588/124496828-3e12b100-ddba-11eb-9d5e-b078505ab197.png)
-
-### SERVICIOS
-
-#### Los servicios que se necesiten en mi servicio los INYECTO en el Construtor.
-
-![image](https://user-images.githubusercontent.com/23094588/124551861-0b58cf00-de33-11eb-987f-ba950ed7069e.png)
-
-Crear variable de clase que se usará en los métodos con el valor Inyectado
-
-![image](https://user-images.githubusercontent.com/23094588/124552300-a487e580-de33-11eb-89d0-757dbe074a6c.png)
-
-#### En el Controlador Llamamos al Servicio que hace la Lógica
-
-![image](https://user-images.githubusercontent.com/23094588/124553379-f2511d80-de34-11eb-85c2-2bd94493914a.png)
-
-El Servicio tiene que responder una respuesta que le llegará al Controlador. SEGUN LO QUE SE QUIERA DEVOLVER
-
-Devolver solo el ID
-
-![image](https://user-images.githubusercontent.com/23094588/124553701-57a50e80-de35-11eb-8c79-453ac145b9ac.png)
-
-
-Devolver la Entidad Entera
-
-![image](https://user-images.githubusercontent.com/23094588/124553760-6db2cf00-de35-11eb-8cca-ecd716cc90bd.png)
-
-Un Array Asociativo
-
-![image](https://user-images.githubusercontent.com/23094588/124554018-c97d5800-de35-11eb-8781-1745bb8ecb7e.png)
-
-#### Para posibles fallos en el Flush hay dos opciones de Manejarlo:
-
-1) Con TRY en el Servicio (Quitamos el del Controlador)
-
-![image](https://user-images.githubusercontent.com/23094588/124554405-3a247480-de36-11eb-965a-8d9aa03232dc.png)
-
-![image](https://user-images.githubusercontent.com/23094588/124554822-abfcbe00-de36-11eb-91bb-f00b831adec4.png)
-
-2) Manejar la Excepción del fallo en el Servicio(flush) en el Controlador
-
-![image](https://user-images.githubusercontent.com/23094588/124555164-0c8bfb00-de37-11eb-824c-3730b7643aba.png)
-
-
-#### El Constructor necesita usar el Servicio ¿Comó le llega? INYECTANDOLO
-
-![image](https://user-images.githubusercontent.com/23094588/124567029-e1f46f00-de43-11eb-864a-cc788662216b.png)
-
-#### El Constructor es el encargado de recibir el REQUEST y recuperar los datos, que serán pasados al Servicio, NUNCA SE LE PASA EL REQUEST COMPLETO al Servicio para que el obtenga los datos, ES UNA TAREA DEL CONTROLADOR.
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/23094588/124583463-5b478e00-de53-11eb-8de6-867fb752a8c8.png)
 
 
