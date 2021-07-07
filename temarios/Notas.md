@@ -70,6 +70,9 @@ Este método es más discutible si se cambia o no a un Servicio:
 
 ![image](https://user-images.githubusercontent.com/23094588/124574192-8679af80-de4a-11eb-9a9c-6ff0fb223d1a.png)
 
+### CLAVES
+
+![image](https://user-images.githubusercontent.com/23094588/124796608-a5af3480-df51-11eb-9b80-6e73df6bb1bb.png)
 
 
 
