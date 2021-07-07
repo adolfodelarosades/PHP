@@ -75,6 +75,9 @@ Este método es más discutible si se cambia o no a un Servicio:
 ![image](https://user-images.githubusercontent.com/23094588/124796608-a5af3480-df51-11eb-9b80-6e73df6bb1bb.png)
 
 
+### ACTUALIZACION PHP 8
+
+![image](https://user-images.githubusercontent.com/23094588/124842577-30168900-df90-11eb-8ebc-a0fb0cf74671.png)
 
 
 
