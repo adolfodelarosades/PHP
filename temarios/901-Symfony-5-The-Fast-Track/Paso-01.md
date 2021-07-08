@@ -39,59 +39,59 @@ como ejecutar **`git clone`**, **`git log`**, **`git show`**, **`git diff`**, **
 Usaremos **Docker** para los servicios, pero me gusta tener PHP instalado en mi ordenador local por razones de rendimiento, estabilidad y
 simplicidad. La combinación de un servicio local de PHP y Docker es la combinación perfecta para mí.
 
-Usa **PHP 8.0** y comprueba que las siguientes extensiones de PHP están instaladas o instálalas ahora: **`intl`** , **`pdo_pgsql`** , **`xsl`** , **`amqp , **`gd , **`openssl y
-**`sodium. Opcionalmente también puedes instalar redis, curl y zip.
-Puedes comprobar las extensiones habilitadas actualmente usando php
--m.
-También necesitamos php-fpm si tu plataforma lo soporta, php-cgi
-también sirve.
-1.7Composer
-Hoy en día, gestionar dependencias lo es todo en un proyecto Symfony.
-Descarga la última versión de Composer , la herramienta de gestión de
+Usa **PHP 8.0** y comprueba que las siguientes extensiones de PHP están instaladas o instálalas ahora: **`intl`** , **`pdo_pgsql`** , **`xsl`** , **`amqp`** , **`gd`** , **`openssl`** y **`sodium`**. Opcionalmente también puedes instalar **redis**, **curl** y **zip**.
+
+Puedes comprobar las extensiones habilitadas actualmente usando **`php -m`**
+
+También necesitamos **`php-fpm`** si tu plataforma lo soporta, **`php-cgi`** también sirve.
+
+### 1.7 Composer
+
+Hoy en día, gestionar dependencias lo es todo en un proyecto Symfony. **Descarga la última versión de Composer** , la herramienta de gestión de
 paquetes para PHP.
-Si no estás familiarizado con Composer, tómate un tiempo para leer sobre
-él.
-33No es necesario que escribas los nombres completos de los comandos:
-composer req hace lo mismo que composer require, usa composer rem en
-lugar de composer remove…
-1.8 NodeJS
-No escribiremos mucho código JavaScript, pero usaremos herramientas
-JavaScript / NodeJS para administrar nuestros assets. Comprueba que
-tienes NodeJS instalado y el gestor de paquetes Yarn.
-1.9 Docker y Docker Compose
-Gestionaremos los servicios mediante Docker y Docker Compose.
-Instálalos e inicia Docker. Si es la primera vez que lo utilizas, familiarízate
-con él. Pero no te asustes, lo usaremos de forma muy sencilla. Sin
-configuraciones sofisticadas ni complejas.
-1.10Symfony CLI
-Por último, pero no por ello menos importante, utilizaremos la línea de
-comandos (CLI) de symfony para aumentar nuestra productividad. Desde
-el servidor web local que proporciona, hasta la integración completa con
-Docker y el soporte de SymfonyCloud, nos servirá para ahorrar mucho
+
+***Si no estás familiarizado con Composer, tómate un tiempo para leer sobre él***.
+
+> :bulb: No es necesario que escribas los nombres completos de los comandos **`composer req`** hace lo mismo que **`composer require`**, usa **`composer rem`** en lugar de **`composer remove`** ...
+
+### 1.8 NodeJS
+
+No escribiremos mucho código JavaScript, pero usaremos herramientas **JavaScript/NodeJS** para administrar nuestros assets. Comprueba que
+tienes **NodeJS** instalado y el gestor de paquetes **Yarn**.
+
+### 1.9 Docker y Docker Compose
+
+Gestionaremos los servicios mediante **Docker** y **Docker Compose**. Instálalos e inicia Docker. ***Si es la primera vez que lo utilizas, familiarízate con él***. Pero no te asustes, lo usaremos de forma muy sencilla. Sin configuraciones sofisticadas ni complejas.
+
+### 1.10 Symfony CLI
+
+Por último, pero no por ello menos importante, utilizaremos la línea de comandos (CLI) de symfony para aumentar nuestra productividad. Desde
+el servidor web local que proporciona, hasta la integración completa con Docker y el soporte de **SymfonyCloud**, nos servirá para ahorrar mucho
 tiempo.
-Instala Symfony CLI y muévelo a algún lugar dentro de tu $PATH. Crea
-una cuenta SymfonyConnect si aún no la tienes e inicia sesión a través de
-symfony login.
-Para utilizar HTTPS localmente, también necesitamos instalar una
-autoridad de certificación (CA) para habilitar el soporte de TLS. Ejecuta el
-siguiente comando:
+
+Instala **Symfony CLI** y muévelo a algún lugar dentro de tu **$PATH**. **Crea una cuenta SymfonyConnect** si aún no la tienes e inicia sesión a través de symfony login.
+
+Para utilizar **HTTPS** localmente, también necesitamos **instalar una autoridad de certificación (CA)** para habilitar el soporte de TLS. Ejecuta el siguiente comando: 
+
+```sh
 $ symfony server:ca:install
-34Comprueba que tu ordenador tiene todos los requisitos necesarios
-ejecutando el siguiente comando:
+```
+
+Comprueba que tu ordenador tiene todos los requisitos necesarios ejecutando el siguiente comando:
+
+```sh
 $ symfony book:check-requirements
-Si quieres trabajar de forma aún más elegante, también puedes ejecutar el
-proxy de Symfony . Es opcional, pero te permite obtener un nombre de
-dominio local que termina en .wip para tu proyecto.
-Cuando ejecutemos un comando en una terminal, casi siempre le
-pondremos el prefijo symfony, por ejemplo symfony composer, en vez de
-sólo composer , o symfony console en lugar de ./bin/console.
-La razón principal es que la CLI de Symfony establece automáticamente
-algunas variables de entorno basadas en los servicios que se ejecutan
-en tu máquina a través de Docker. Estas variables de entorno están
-disponibles para las peticiones HTTP porque el servidor web local las
-inyecta automáticamente. Por lo tanto, el uso de symfony en la CLI
-asegura que tengas el mismo comportamiento en todos los componentes
+```
+
+Si quieres trabajar de forma aún más elegante, también puedes ejecutar el **proxy de Symfony** . Es opcional, pero te permite obtener un nombre de
+dominio local que termina en **.wip** para tu proyecto.
+
+Cuando ejecutemos un comando en una terminal, casi siempre le pondremos el prefijo **`symfony`**, por ejemplo **`symfony composer`**, en vez de
+sólo **`composer`** , o **`symfony console`** en lugar de **`./bin/console`**.
+
+La razón principal es que la **CLI de Symfony** establece automáticamente algunas variables de entorno basadas en los servicios que se ejecutan
+en tu máquina a través de **Docker**. Estas variables de entorno están disponibles para las peticiones HTTP porque el servidor web local las
+inyecta automáticamente. Por lo tanto, el uso de symfony en la CLI asegura que tengas el mismo comportamiento en todos los componentes
 de tu entorno.
-Además, la CLI de Symfony selecciona automáticamente la «mejor»
-versión posible de PHP para el proyecto.
-35
+
+Además, la CLI de Symfony selecciona automáticamente la «mejor» versión posible de PHP para el proyecto.
