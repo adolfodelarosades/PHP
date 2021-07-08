@@ -7,7 +7,7 @@ https://fabien.potencier.org/
 
 ## Contenidos
 
-### Paso 0: [¿De qué trata este libro?]()
+### Paso 0: [¿De qué trata este libro?](901-Symfony-5-The-Fast-Track/Paso-00.md)
 ### Paso 1: [Revisando tu entorno de trabajo]()
 ### Paso 2: [Presentando el proyecto]()
 ### Paso 3: [Desde cero hasta producción]()
