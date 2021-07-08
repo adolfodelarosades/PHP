@@ -42,7 +42,7 @@ tipo:
 * 20 líneas para la configuración de la infraestructura de desarrollo (Docker);
 * 100 líneas para la configuración de la infraestructura de producción (SymfonyCloud);
 * 5 variables de entorno explícitas.
-* 
+
 ¿Listo para el desafío?
 
 ## 2.4 Obteniendo el código fuente del proyecto
