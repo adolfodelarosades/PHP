@@ -2337,17 +2337,69 @@ INSERT INTO `sepe_ejercicio_01`.`user` (`email`, `roles`, `password`) VALUES ('a
 
 ### Otra forma de Crear el Pasword
 
+
 `php bin/console security:hash-password  prueba`
+
+![image](https://user-images.githubusercontent.com/23094588/125315518-84768b80-e337-11eb-9be1-6bfcbaea4b13.png)
+
+
+### Autenticación
+
+![image](https://user-images.githubusercontent.com/23094588/125316249-3ca43400-e338-11eb-9e51-6f4641d31f8a.png)
 
 ![image](https://user-images.githubusercontent.com/23094588/125312200-5ba0c700-e334-11eb-9953-8912fa821444.png)
 
 
-INSERT INTO `user` (`id`, `email`, `roles`, `password`) VALUES (NULL, 'adolfo@gmail.com', '"[ROLE_ADMIN]"', '$2y$13$0VRervWca3XFt8J48AfTPuFKANy0wupTXjJ.LCNZtMIDotiUuK50C');
+INSERT INTO `user` (`id`, `email`, `roles`, `password`) VALUES (NULL, 'adolfo@gmail.com', '["ROLE_ADMIN"]', '$2y$13$0VRervWca3XFt8J48AfTPuFKANy0wupTXjJ.LCNZtMIDotiUuK50C');
 
 
 ![image](https://user-images.githubusercontent.com/23094588/125314936-f26e8300-e336-11eb-9722-296ac56c0f15.png)
 
 
+A creado un LOGIN
+
+![image](https://user-images.githubusercontent.com/23094588/125317341-395d7800-e339-11eb-9f20-6a8ab65146e6.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125317871-9f49ff80-e339-11eb-9e0c-22253890f0df.png)
+
+
+El Controlador **`SecurityController`**
+
+![image](https://user-images.githubusercontent.com/23094588/125318000-bd176480-e339-11eb-80c2-4c71e58997b2.png)
+
+
+Probando el Login
+
+![image](https://user-images.githubusercontent.com/23094588/125318141-dfa97d80-e339-11eb-8f34-275db2704cb4.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/125318175-e932e580-e339-11eb-9faa-60626914a94c.png)
+
+
+Entrando Bien
+
+![image](https://user-images.githubusercontent.com/23094588/125329063-57c97080-e345-11eb-9922-981a989cad0e.png)
+
+Me lleva a donde le indico en :
+
+![image](https://user-images.githubusercontent.com/23094588/125329221-87787880-e345-11eb-9537-a7195a0afe07.png)
+
+Si regreso al Login me indica que ya estoy Logeado
+
+![image](https://user-images.githubusercontent.com/23094588/125329446-ca3a5080-e345-11eb-9abe-8c620ded06f0.png)
+
+
+Para Logout en la barra de Status.
+
+PARA LIMITAR
+
+![image](https://user-images.githubusercontent.com/23094588/125335723-29e82a00-e34d-11eb-8c60-d1b26e485b4d.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125337482-57ce6e00-e34f-11eb-929a-07b405602295.png)
+
+
+
+![image](https://user-images.githubusercontent.com/23094588/125329116-66b02300-e345-11eb-9ff1-7e7eae51c5a1.png)
 
 
 
