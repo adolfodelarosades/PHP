@@ -2299,4 +2299,56 @@ Ver apuntes Profe.
 
 
 
+## Seguridad
+
+![image](https://user-images.githubusercontent.com/23094588/125306144-3fe6f200-e32f-11eb-8f2c-9aa28b499ff5.png)
+
+Modifico security.yml
+
+![image](https://user-images.githubusercontent.com/23094588/125306547-9a804e00-e32f-11eb-9c4d-827c3b26fac5.png)
+
+
+Hacer
+
+```sh
+php bin/console make:migration
+
+php bin/console doctrine:migrations:migrate
+```
+
+![image](https://user-images.githubusercontent.com/23094588/125308051-e089e180-e330-11eb-9102-9aed36551a1d.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125308203-ff887380-e330-11eb-869f-035e05aecb21.png)
+
+### Crear Password para prueba
+
+```
+php bin/console security:encode-password  prueba
+```
+
+![image](https://user-images.githubusercontent.com/23094588/125310015-81c56780-e332-11eb-911e-d62d2c833e2e.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125310444-df59b400-e332-11eb-9184-a0ae748eb270.png)
+
+INSERT INTO `sepe_ejercicio_01`.`user` (`email`, `roles`, `password`) VALUES ('adolfo@gmail.com',  [ROLE_ADMIN], '$argon2id$v=19$m=65536,t=4,p=1$6QUAqaKfdgI6zfb5Xs0bfw$L3O+XcRC5VbRZYd8KP6dl2kIqW/4QQ5fqVQCSSr2ido');
+
+![image](https://user-images.githubusercontent.com/23094588/125310542-fd271900-e332-11eb-803c-ea58c7b4e8df.png)
+
+
+### Otra forma de Crear el Pasword
+
+`php bin/console security:hash-password  prueba`
+
+![image](https://user-images.githubusercontent.com/23094588/125312200-5ba0c700-e334-11eb-9953-8912fa821444.png)
+
+
+INSERT INTO `user` (`id`, `email`, `roles`, `password`) VALUES (NULL, 'adolfo@gmail.com', '"[ROLE_ADMIN]"', '$2y$13$0VRervWca3XFt8J48AfTPuFKANy0wupTXjJ.LCNZtMIDotiUuK50C');
+
+
+![image](https://user-images.githubusercontent.com/23094588/125314936-f26e8300-e336-11eb-9722-296ac56c0f15.png)
+
+
+
+
+
 
