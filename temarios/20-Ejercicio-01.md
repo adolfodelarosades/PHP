@@ -40,6 +40,7 @@ Para realizar este proyecto se siguierón los siguientes pasos:
 * 32 CRUD Fondos (Pasos 24 - 29)
 * 33 Mensajes FLASH para CRUD
 * 34 Objeto Response y JSON
+* 35 DataTable
 
 ## ✅ 01 Creación del Proyecto
 
@@ -2031,6 +2032,130 @@ http://localhost:8000/json_response
 http://localhost:8000/metodo_json
 
 ![image](https://user-images.githubusercontent.com/23094588/125272580-4c0d8800-e30c-11eb-80ff-b1ef673f2980.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125275128-eff83300-e30e-11eb-8e2e-72d4487dea11.png)
+
+
+## ✅ 35 DataTable
+
+https://datatables.net/
+
+CDN
+
+```html
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
+```
+
+Plantilla HTML
+
+```html
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Data 1</td>
+            <td>Row 1 Data 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Data 1</td>
+            <td>Row 2 Data 2</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+JS DataTable
+
+```js
+$(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+```
+
+Vamos a crear el Controlador **`DataTableFondos`**
+
+`bin/consome make:controller`
+
+![image](https://user-images.githubusercontent.com/23094588/125276452-837e3380-e310-11eb-92f6-9a1780c258f7.png)
+
+La Ruta la a puesto así:
+
+` #[Route('/data/table/fondos', name: 'data_table_fondos')]`
+
+Hay que modificarla por 
+
+` #[Route('/datatablefondos', name: 'data_table_fondos')]`
+
+En la Plantilla asociada al Controlador vamos a meter el siguiente código:
+
+```html
+{% extends 'base.html.twig' %}
+
+{% block title %}Data Table Fondos{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+{% endblock %}
+
+{% block body %}
+{{ include('comunes/_menu.html.twig') }}
+<main class="container-fluid py-4">
+    <h1 class="text-center">Fondos</h1>
+
+
+    <table id="mitabla">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Isbn</th>
+                <th>Edicion</th>
+                <th>Publicacion</th>
+            </tr>
+        </thead>
+    </table>
+</main>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready( function () {
+            $('#mitabla').DataTable({
+                ajax: 'una/url'
+            });
+        } );
+    </script>
+{% endblock %}
+```
+
+![image](https://user-images.githubusercontent.com/23094588/125283813-0c996880-e319-11eb-85bd-e36a8f40dc8a.png)
+
+El CSS y JS de DataTable solo lo estamos metiendo en esta plantilla.
+
+La salida que obtenemos con esto es:
+
+![image](https://user-images.githubusercontent.com/23094588/125283934-2cc92780-e319-11eb-93e2-b48652bb2d79.png)
+
+Vamos a Crear la Acción que retorna los datos:
+
+![image](https://user-images.githubusercontent.com/23094588/125287059-c6de9f00-e31c-11eb-98e1-fb32202d8084.png)
+
+Y en la plantilla llamamos por medio de AJAX a este enlace.
+
+![image](https://user-images.githubusercontent.com/23094588/125287202-eb3a7b80-e31c-11eb-92e4-f95cb4efe3b3.png)
+
+La salida obtenida es:
+
+![image](https://user-images.githubusercontent.com/23094588/125287311-0b6a3a80-e31d-11eb-8ed8-f620a0a59bf0.png)
+
 
 
 
