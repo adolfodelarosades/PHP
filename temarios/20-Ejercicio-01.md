@@ -38,6 +38,7 @@ Para realizar este proyecto se siguierón los siguientes pasos:
 * 30 Modificar una Editorial
 * 31 CRUD Autores (Pasos 24 - 29)
 * 32 CRUD Fondos (Pasos 24 - 29)
+* 33 Mensajes FLASH para CRUD
 
 ## ✅ 01 Creación del Proyecto
 
@@ -1742,4 +1743,63 @@ git commit -m "CRUD Fondos"
 
 ![image](https://user-images.githubusercontent.com/23094588/124583463-5b478e00-de53-11eb-8de6-867fb752a8c8.png)
 
+
+## ✅ 33 Mensajes FLASH para CRUD
+
+Vamos a crear una serie de mensajes que avisen que pasa con cada acción que se realice en el CRUD.
+
+Creamos el archivo **`_mensajes.html.twig`**
+
+![image](https://user-images.githubusercontent.com/23094588/125246381-ffb54e80-e2f1-11eb-93a0-19b53e9187be.png)
+
+```js
+{% for type, messages in app.flashes %}
+  {% for message in messages %}
+    <div class="alert alert-{{ type }} alert-dismissible fade show"
+      role="alert">
+      {{ message }}
+      <button type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% endfor %}
+{% endfor %}
+```
+
+Vamos a añadir en **`index.html.twig`** la inclusión de **`_mensajes.html.twig`**
+
+![image](https://user-images.githubusercontent.com/23094588/125246622-4e62e880-e2f2-11eb-925e-16797136de8f.png)
+
+Finalmente en **`EditorialesController.php`**, **`AutoresController.php`** y **`FondosController.php`** añadimos los **mensajes FLUSH** en cada acción del CRUD.
+
+![image](https://user-images.githubusercontent.com/23094588/125247013-c6311300-e2f2-11eb-900e-1513a47df4db.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125247152-ed87e000-e2f2-11eb-855f-d2970c18adc7.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125247291-0f816280-e2f3-11eb-9cc7-26ebde885281.png)
+
+
+Probando el CRUD Editorial tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/125245784-422a5b80-e2f1-11eb-9539-b9033c93fc55.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125245845-59694900-e2f1-11eb-99ff-7d8bba8a6480.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125245875-64bc7480-e2f1-11eb-8ee8-9eebffc3d6e0.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125245945-769e1780-e2f1-11eb-95a0-7437b673dd97.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125246010-887fba80-e2f1-11eb-909e-1093cddd61bc.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125246046-92a1b900-e2f1-11eb-939b-f40536079219.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125246110-a51bf280-e2f1-11eb-8f0d-1a2a689b81e1.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/125247670-7c94f800-e2f3-11eb-909e-6fbf9b43ca02.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125247894-b960ef00-e2f3-11eb-9cb1-ba190d61fb40.png)
 
