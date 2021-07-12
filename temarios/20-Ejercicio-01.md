@@ -2146,15 +2146,154 @@ La salida que obtenemos con esto es:
 
 Vamos a Crear la Acción que retorna los datos:
 
+```html
+#[Route('/libros_json', name: 'libros_json')]
+    public function libros_json(FondoRepository $fondoRepository): Response
+    {
+        $fondos = $fondoRepository->findAll();
+
+        $fondosArray = [];
+
+        foreach($fondos as $fondo){
+            $fondoArray = [
+                $fondo->getTitulo(),
+                $fondo->getIsbn(),
+                $fondo->getEdicion(),
+                $fondo->getPublicacion()
+            ];
+            $fondosArray[] = $fondoArray;
+        }
+
+        $content = [
+            'data' => $fondosArray
+        ];
+
+        return new JsonResponse($content);
+    }
+```
+
 ![image](https://user-images.githubusercontent.com/23094588/125287059-c6de9f00-e31c-11eb-98e1-fb32202d8084.png)
 
 Y en la plantilla llamamos por medio de AJAX a este enlace.
 
 ![image](https://user-images.githubusercontent.com/23094588/125287202-eb3a7b80-e31c-11eb-92e4-f95cb4efe3b3.png)
 
+```html
+{% extends 'base.html.twig' %}
+
+{% block title %}Data Table Fondos{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+{% endblock %}
+
+{% block body %}
+{{ include('comunes/_menu.html.twig') }}
+<main class="container-fluid py-4">
+    <h1 class="text-center">Fondos</h1>
+
+    <table id="mitabla">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Isbn</th>
+                <th>Edicion</th>
+                <th>Publicacion</th>
+            </tr>
+        </thead>
+    </table>
+</main>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready( function () {
+            $('#mitabla').DataTable({
+                ajax: 'libros_json'
+            });
+        } );
+    </script>
+{% endblock %}
+```
+
 La salida obtenida es:
 
 ![image](https://user-images.githubusercontent.com/23094588/125287311-0b6a3a80-e31d-11eb-8ed8-f620a0a59bf0.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125295724-ce567600-e325-11eb-9063-1db96016acd5.png)
+
+### Otras formas de usar que AJAX
+
+![image](https://user-images.githubusercontent.com/23094588/125296342-7b30f300-e326-11eb-9900-a796e8a403b2.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125296373-81bf6a80-e326-11eb-96ef-9508c0fcf311.png)
+
+```js
+    <script>
+        $(document).ready( function () {
+            /*
+            $('#mitabla').DataTable({
+                ajax: 'libros_json'
+            });*/
+            fetch('libros_json').then(
+                respuesta => {
+                    console.log(respuesta);
+                }
+            )
+        } );
+    </script>
+```
+
+
+### Llamar a URLs Externas
+
+![image](https://user-images.githubusercontent.com/23094588/125297086-378ab900-e327-11eb-8102-8931b1312569.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125297142-470a0200-e327-11eb-8274-4c0ce103ebb0.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125297251-5f7a1c80-e327-11eb-8141-9cf0dc344d88.png)
+
+```js
+    <script>
+        $(document).ready( function () {
+            /*
+            $('#mitabla').DataTable({
+                ajax: 'libros_json'
+            });*/
+            fetch('https://restcountries.eu/rest/v2/all').then(
+                respuesta => {
+                    console.log(respuesta);
+                }
+            )
+        } );
+    </script>
+```
+
+### URL ESXTERNOS
+
+```js
+<script>
+        $(document).ready( function () {
+            /*
+            $('#mitabla').DataTable({
+                ajax: 'libros_json'
+            });*/
+            fetch('https://restcountries.eu/rest/v2/all')
+               .then(response => response.json())
+               .then(data => console.log(data));
+        } );
+    </script>
+```
+
+![image](https://user-images.githubusercontent.com/23094588/125302635-6c4d3f00-e32c-11eb-81f5-57f0b6536298.png)
+
+
+### Como queda despues de meterlo en un Servicio
+
+Ver apuntes Profe.
+
 
 
 
