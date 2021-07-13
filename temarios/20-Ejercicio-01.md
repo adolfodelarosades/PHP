@@ -41,6 +41,8 @@ Para realizar este proyecto se siguierón los siguientes pasos:
 * 33 Mensajes FLASH para CRUD
 * 34 Objeto Response y JSON
 * 35 DataTable
+* 36 Seguridad
+* 37 
 
 ## ✅ 01 Creación del Proyecto
 
@@ -2299,7 +2301,7 @@ Ver apuntes Profe.
 
 
 
-## Seguridad
+## ✅ 36 Seguridad
 
 ![image](https://user-images.githubusercontent.com/23094588/125306144-3fe6f200-e32f-11eb-8f2c-9aa28b499ff5.png)
 
@@ -2414,11 +2416,38 @@ Si hemos entrado con la opción de Recordar, para la proxima vez que se haga pod
 
 ![image](https://user-images.githubusercontent.com/23094588/125407533-42daf480-e3ba-11eb-926f-4ad939ce2af4.png)
 
+### Restricción con diferentes Usuarios
+
+![image](https://user-images.githubusercontent.com/23094588/125475013-74a9f01a-da5a-4357-8c64-b13dd5780995.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125475076-a986acc2-30cc-417b-8419-7884aec331c5.png)
+
+Si con el usuario **`adolfo@gmail.com`** intento entrar en **`Fondos DT`** me marca:
+
+![image](https://user-images.githubusercontent.com/23094588/125475577-45dc5891-484e-4141-9c6b-6df0fcad66ec.png)
+
+
+
+
 Git 
 
 ![image](https://user-images.githubusercontent.com/23094588/125408142-df04fb80-e3ba-11eb-8f8a-7634cf2abae8.png)
 
 ![image](https://user-images.githubusercontent.com/23094588/125408373-1ffd1000-e3bb-11eb-8f50-4f9566495ae0.png)
+
+
+### Remember
+
+Descomentar texto en la plantilla de Logout
+
+![image](https://user-images.githubusercontent.com/23094588/125474695-fea4db5f-2ccb-4367-abaa-867d964d9125.png)
+
+Ver https://symfony.com/doc/current/security/remember_me.html
+
+Y añadir en **`security.yaml`** poner:
+
+![image](https://user-images.githubusercontent.com/23094588/125474908-a4464965-ac55-4d86-89fc-a5afcd8a8370.png)
+
 
 
 
