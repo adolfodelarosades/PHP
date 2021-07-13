@@ -2448,6 +2448,38 @@ Y añadir en **`security.yaml`** poner:
 
 ![image](https://user-images.githubusercontent.com/23094588/125474908-a4464965-ac55-4d86-89fc-a5afcd8a8370.png)
 
+![image](https://user-images.githubusercontent.com/23094588/125476344-ce0cf9a6-5c7c-49b1-95be-d8cdf6b19914.png)
+
+## API JSON LOGIN
+
+En el Security meter:
+
+![image](https://user-images.githubusercontent.com/23094588/125485450-cf39a7e4-66fd-4f6e-853a-0b488bf19955.png)
+
+
+En el index.php
+
+### Meter el cors
+
+![image](https://user-images.githubusercontent.com/23094588/125486379-bb48ae00-6121-41ea-bdf9-26e0a06c6996.png)
+
+### Meter la Acción
+
+![image](https://user-images.githubusercontent.com/23094588/125486536-27927b67-2472-4843-8c22-cae58c12dbc0.png)
+
+
+### Probar el Enlace
+
+
+
+![image](https://user-images.githubusercontent.com/23094588/125492139-61ccccea-653e-4879-a868-d5bbed4d6b0e.png)
+
+
+
+
+
+
+
 
 
 
