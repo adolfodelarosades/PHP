@@ -2474,8 +2474,95 @@ En el index.php
 
 ![image](https://user-images.githubusercontent.com/23094588/125492139-61ccccea-653e-4879-a868-d5bbed4d6b0e.png)
 
+![image](https://user-images.githubusercontent.com/23094588/125492569-1c069b45-5743-41d9-a350-2eda528236c3.png)
+![image](https://user-images.githubusercontent.com/23094588/125492612-1c049520-e785-4bd6-8375-3a0626e0f8af.png)
 
 
+GIT
+
+![image](https://user-images.githubusercontent.com/23094588/125493001-487466d7-66b1-457e-b2ed-a5c1276f9636.png)
+
+## TOKEN
+
+https://github.com/lexik/LexikJWTAuthenticationBundle/blob/master/Resources/doc/index.md
+
+![image](https://user-images.githubusercontent.com/23094588/125493447-d1d9e85a-8218-4dec-80b6-2edf5b132dd5.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125493602-334385e8-43da-4aba-97e9-f1fd1aeb4e30.png)
+
+
+### Instalar Bundle de Tokens
+
+![image](https://user-images.githubusercontent.com/23094588/125496987-59a8923b-e1e8-4333-9878-ea88808f4aef.png)
+
+Como me daba error tuve que borrar composer.lock y meti **`"lexik/jwt-authentication-bundle": "^2.12",`** en el composer.json.
+
+Dar **`composer install`**
+
+
+![image](https://user-images.githubusercontent.com/23094588/125497095-906a47bf-4083-4199-96d3-356ad940a444.png)
+
+
+Luego escribir **`php bin/console lexik:jwt:generate-keypair`**
+
+En Windows a dado error ver en https://slproweb.com/products/Win32OpenSSL.html
+
+Y volver a ejecutar **`php bin/console lexik:jwt:generate-keypair`**
+
+
+### GENERA CLAVE PUBLICA Y PRICVADA EN LA CARPETA jwt
+![image](https://user-images.githubusercontent.com/23094588/125498968-ae5872ba-efad-41b4-a50e-f87042b55559.png)
+
+
+Meter eso en el **`.gitignore`**
+
+Si cifras un texto con la clave pública => SOLAMENTE se puede descrifrar con la privada => CONFIDENCIALIDAD
+Si cifras un texto con la clave privada => SOLAMENTE se puede descrifrar con la pública => AUTENTICIDAD, FIRMA, INTEGRIDAD
+
+HTTPS los navegadores envían el contenido de las peticiones crifrado con la clave pública del server
+
+Archivo para configurar
+
+
+![image](https://user-images.githubusercontent.com/23094588/125500580-d4851f11-a3ba-4323-a575-358b1aec50f5.png)
+
+
+### LO QUE EL METE
+
+**`.env`** Penerlo en **`.env.local`** para no subirlo al Repositorio
+
+![image](https://user-images.githubusercontent.com/23094588/125502718-01678639-d15a-4932-961c-c1ced4055f8f.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/125502558-6551312d-92b7-4fe7-86bb-ba305c565b9f.png)
+
+
+### COSAS QUE CAMBIAMOS
+
+![image](https://user-images.githubusercontent.com/23094588/125502470-2f5f39d8-896b-4b7e-96de-d20994c9e1ff.png)
+
+
+
+### HAY CONFLICTOS CON LAS AUTENTICACIONES COMENTMOS UNA
+
+![image](https://user-images.githubusercontent.com/23094588/125502377-23ef2d23-4ffc-4181-a326-045c4e5a9743.png)
+
+
+Después de cambiar todo y probar regresa un TOKEN si va bien
+
+
+
+![image](https://user-images.githubusercontent.com/23094588/125502176-53d8db73-68df-453a-aa79-a10a9080af5f.png)
+![image](https://user-images.githubusercontent.com/23094588/125502225-7abfe08a-d4e7-4d7d-8b30-80ccafeb7510.png)
+
+
+Con una clave mala
+
+![image](https://user-images.githubusercontent.com/23094588/125502848-da81a76c-67e0-4902-8e5a-e675e7a4039f.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125502932-edb87cd7-7808-4d49-87eb-f9491f9e784f.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125503025-614ce98c-07dc-4452-94ce-e9a84ce83052.png)
 
 
 
