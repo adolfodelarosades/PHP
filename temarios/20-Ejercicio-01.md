@@ -2564,6 +2564,15 @@ Con una clave mala
 
 ![image](https://user-images.githubusercontent.com/23094588/125503025-614ce98c-07dc-4452-94ce-e9a84ce83052.png)
 
+Para los dos usuarios parece ser el mismo TOKEN.
+
+TODO LO CAMBIADO HASTA AQUI
+
+![image](https://user-images.githubusercontent.com/23094588/125503515-465849fb-6996-44d4-aaba-6a8961b387ea.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125503760-bc3145f8-42be-464c-98d5-103400d9e7e4.png)
+
+
 
 
 
