@@ -2414,3 +2414,11 @@ Si hemos entrado con la opción de Recordar, para la proxima vez que se haga pod
 
 ![image](https://user-images.githubusercontent.com/23094588/125407533-42daf480-e3ba-11eb-926f-4ad939ce2af4.png)
 
+Git 
+
+![image](https://user-images.githubusercontent.com/23094588/125408142-df04fb80-e3ba-11eb-8f8a-7634cf2abae8.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125408373-1ffd1000-e3bb-11eb-8f50-4f9566495ae0.png)
+
+
+
