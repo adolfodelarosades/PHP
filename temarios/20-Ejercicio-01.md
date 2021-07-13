@@ -2390,6 +2390,11 @@ Si regreso al Login me indica que ya estoy Logeado
 
 
 Para Logout en la barra de Status.
+Para el Logout hay que llamar al enlace **`app_logout`** lo añadimos en el menú.
+
+![image](https://user-images.githubusercontent.com/23094588/125407257-fd1e2c00-e3b9-11eb-960b-3c272be9ebfa.png)
+
+
 
 PARA LIMITAR
 
@@ -2401,6 +2406,11 @@ PARA LIMITAR
 
 ![image](https://user-images.githubusercontent.com/23094588/125329116-66b02300-e345-11eb-9ff1-7e7eae51c5a1.png)
 
+En mi proyecto
+![image](https://user-images.githubusercontent.com/23094588/125407067-cea05100-e3b9-11eb-87d3-b532fbab72ac.png)
 
 
+Si hemos entrado con la opción de Recordar, para la proxima vez que se haga podemos señalar a donde queremos que se redireccione.
+
+![image](https://user-images.githubusercontent.com/23094588/125407533-42daf480-e3ba-11eb-926f-4ad939ce2af4.png)
 
