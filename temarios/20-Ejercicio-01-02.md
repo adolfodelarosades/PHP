@@ -1,1 +1,121 @@
+### Para el **`login-json`**
+
+Le damos acceso para no logeados.
+
+![image](https://user-images.githubusercontent.com/23094588/125641957-e001600e-7786-447e-a887-90295a2baa66.png)
+
+
+Probando
+
+![image](https://user-images.githubusercontent.com/23094588/125642116-917f6feb-ec6a-4be0-a257-548d36852362.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125642194-49dbb320-dddb-41a2-acd6-6e3d24148172.png)
+
+
+El Token recuperado es:
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjYyNzM3MTAsImV4cCI6MTYyNjI3NzA3MCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWRvbGZvQGdtYWlsLmNvbSJ9.Dqh0jJeFxvfR6rv9mF1Jj-Mw9vBF_fd3SVAPxdif1N2wmSII93taqsmClppcGKrRT2nNpe2eE8cDMA4iB7x96YUQKRmCZH6YtpKnOK0K3g8HIoCAz4hYMlMG9jy9SvVGgOdZWoldxlwKM7NMTzFf_C9vsLCNh3fY8s1U8dPhtdlgU73eFoPvNVQiVvZwM5mlizqGvcMXI5tYBuPhjOSS2TBVXJ1w_Z_XI_3nrHTpGax_TNDDScb2xBQ-KlvCCld2WzbAHgkKj4HxhwTRRi4B0HjV3oPwFxXoU4jXnywfC5l8uahEjtQiHy3h056FBR3gWHhQGIMGhjcmX5NrT_ZQrQ
+
+https://jwt.io/
+
+![image](https://user-images.githubusercontent.com/23094588/125642835-917ff86a-0487-47d8-8edc-3fdfa57d6731.png)
+
+
+Aquí podemos ver lo que se oculta en el TOKEN
+
+
+Si intento entrar en http://localhost:8000/fondos
+
+![image](https://user-images.githubusercontent.com/23094588/125643659-20f66e9e-7f72-4c13-acd5-d08648f5e736.png)
+
+
+### DESDE UNA APLICACION ESXTERNA QUE MANDA LLAMAR EL json-lo
+
+Debo pasar el TOKEN en cada llamada
+
+Revisar 13/07/21
+
+
+## 🔴 Bundle Alice Bundle
+
+https://github.com/hautelook/AliceBundle
+
+Pertite insertar registros a mogollon
+
+Para poblar la BD.
+
+El comando para instalar es :
+
+**`composer require --dev hautelook/alice-bundle`**
+
+![image](https://user-images.githubusercontent.com/23094588/125647193-2b7786fa-031f-489a-9611-aa666e09227a.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125647253-8da039a4-07e2-4783-9a1d-6c19f91b7a9e.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/125647455-460d8d31-7a7c-4dbc-947a-6ba79b0bc816.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/125647690-afd95322-62a0-4d42-9fa4-0255ab28576e.png)
+
+
+Crear el Fixure
+
+![image](https://user-images.githubusercontent.com/23094588/125650188-f9b4dab0-ff9f-41f5-9dd9-359214bb5442.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125651513-a46124c6-c5a9-432d-873f-f05bc698d257.png)
+
+
+```
+parameters:
+    hash: $2y$13$KI/2bbjTMVrEmc.wtVe7dOelSDPyNaoiDl.zfwKZAqe82rz0yJDiW
+
+App\Entity\User:
+    user_admin:
+        email: admin@admin.com
+        roles: ["ROLE_ADMIN"]
+        password: <{hash}>
+
+    user_carlos:
+        email: carlos@carlos.com
+        roles: []
+        password: <{hash}>
+
+App\Entity\Editorial:
+    editorial_{1..100}:
+        nombre: <company()>
+
+App\Entity\Autor:
+    autor_{1..500}:
+        nombre: <name()>
+        tipo: 'PERSONA'
+    autor_{501..600}:
+        nombre: <company()>
+        tipo: 'ENTIDAD'
+
+```
+
+Ejecutar Comando
+
+![image](https://user-images.githubusercontent.com/23094588/125649542-1170f561-e6a8-4323-bafa-8747c4380c71.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125650211-e01b02e2-3a3b-4a0a-b3cc-63e35070a49e.png)
+
+
+En la BD
+
+![image](https://user-images.githubusercontent.com/23094588/125650246-2112e390-a59c-43a8-9ad5-ad0a3116dea8.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125650341-d45436eb-255b-4d86-823d-2a9c6bc317b9.png)
+
+
+
+![image](https://user-images.githubusercontent.com/23094588/125649824-b468a2ed-eb40-4649-be40-8c42b0e98ff3.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125651365-27e00311-adaa-43a9-af37-c2495e1b729e.png)
+
+
+
+
+
 
