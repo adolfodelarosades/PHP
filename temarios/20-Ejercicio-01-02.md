@@ -154,6 +154,77 @@ En Datatable no muestra lo mismo solo muestra un Query
 ![image](https://user-images.githubusercontent.com/23094588/125660771-dd92a5dc-694f-4965-8385-e9934706a1f1.png)
 
 
+## 🔴 OPTIMIZAR QUERIES
+
+https://www.doctrine-project.org/projects/doctrine-orm/en/2.9/reference/query-builder.html#the-querybuilder
+
+Añadir funcion en el Repositorio
+
+![image](https://user-images.githubusercontent.com/23094588/125667571-122c9f7e-44da-409a-a88f-731c28c681b0.png)
+
+
+Cambiar en la llamada
+
+![image](https://user-images.githubusercontent.com/23094588/125667623-274e66e0-1ad8-45f2-9420-b30dae24001d.png)
+
+(Tambien se puede cambiar en el Datatable)
+
+Al Probar ya solo sale un Query
+
+![image](https://user-images.githubusercontent.com/23094588/125667691-75eec3c3-fd35-4ff3-a9fe-7f4086cd75db.png)
+
+Para mas Info
+
+https://www.doctrine-project.org/projects/doctrine-orm/en/2.9/reference/dql-doctrine-query-language.html#doctrine-query-language
+
+![image](https://user-images.githubusercontent.com/23094588/125667822-bebb2da6-410d-4da8-8fe6-199981b10588.png)
+
+
+
+Comando para mostrar lo que tenemos instalado en el proyecto **`composer show --installed `**
+
+
+GIT
+
+![image](https://user-images.githubusercontent.com/23094588/125669134-41d3bb42-c209-4115-8615-6072bd5ceed2.png)
+
+## 🔴 QUERY BUILDER
+
+![image](https://user-images.githubusercontent.com/23094588/125670154-f4437dee-11a9-438b-a47d-d2d34d4f35c7.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/125670736-393adfca-600a-47ed-a02b-c5c00e79084e.png)
+
+Llamo el método
+
+
+![image](https://user-images.githubusercontent.com/23094588/125671443-ca50e822-1b2a-413b-9251-be84d20c913e.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/125671509-dadb763e-3d78-478f-acf0-0eb767cd580f.png)
+
+
+GIT
+
+![image](https://user-images.githubusercontent.com/23094588/125674385-58728313-cebc-4f60-8240-6477530b217b.png)
+
+
+
+
+
+## 🔴 SQL
+
+![image](https://user-images.githubusercontent.com/23094588/125670774-0f2b8f8a-5111-4776-8129-df5a23a6566a.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125674629-d6f22b9d-13e9-4548-8904-b7ee0e499f40.png)
+
+
+OJO este query regresa 2050 resultados por los cruces
+
+Hay que tratar los datos antes de devolverlos para que el proceso siga trabajando.
+
+![image](https://user-images.githubusercontent.com/23094588/125674782-68610a25-71cc-4d90-9741-78f8395d5975.png)
+
 
 
 
