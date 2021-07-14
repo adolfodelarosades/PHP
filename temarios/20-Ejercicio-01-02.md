@@ -225,6 +225,7 @@ Hay que tratar los datos antes de devolverlos para que el proceso siga trabajand
 
 ![image](https://user-images.githubusercontent.com/23094588/125674782-68610a25-71cc-4d90-9741-78f8395d5975.png)
 
+![image](https://user-images.githubusercontent.com/23094588/125675458-83270e07-9e5c-4f2f-a33f-c8a0f4b0bf39.png)
 
 
 
