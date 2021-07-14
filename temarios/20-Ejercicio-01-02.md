@@ -147,7 +147,11 @@ En Datatable no muestra lo mismo solo muestra un Query
 
 ![image](https://user-images.githubusercontent.com/23094588/125656921-3678a727-f40b-43e6-8cc1-3aee20a2d194.png)
 
+### GIT de Alice
 
+![image](https://user-images.githubusercontent.com/23094588/125660646-c6c0b254-12cf-4566-9b53-97869ec9e496.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125660771-dd92a5dc-694f-4965-8385-e9934706a1f1.png)
 
 
 
