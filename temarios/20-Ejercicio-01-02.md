@@ -75,9 +75,14 @@ App\Entity\User:
         email: admin@admin.com
         roles: ["ROLE_ADMIN"]
         password: <{hash}>
+    
+    user_adolfo_admin:
+        email: adolfoAdmin@gmail.com
+        roles: ["ROLE_ADMIN"]
+        password: <{hash}>
 
     user_carlos:
-        email: carlos@carlos.com
+        email: adolfo@gmail.com
         roles: []
         password: <{hash}>
 
@@ -93,6 +98,15 @@ App\Entity\Autor:
         nombre: <company()>
         tipo: 'ENTIDAD'
 
+App\Entity\Fondo:
+    fondo_{1..1000}:
+        titulo: <sentence()>
+        isbn: <isbn13()>
+        edicion: <numberBetween(1940, 2021)>
+        publicacion: <numberBetween(1940, 2021)>
+        categoria: <word()>
+        editorial: '@editorial_*'
+        autores: '<numberBetween(1, 3)>x @autor_*'
 ```
 
 Ejecutar Comando
@@ -113,6 +127,27 @@ En la BD
 ![image](https://user-images.githubusercontent.com/23094588/125649824-b468a2ed-eb40-4649-be40-8c42b0e98ff3.png)
 
 ![image](https://user-images.githubusercontent.com/23094588/125651365-27e00311-adaa-43a9-af37-c2495e1b729e.png)
+
+En la WEB
+
+
+![image](https://user-images.githubusercontent.com/23094588/125654437-4d1f6de2-5334-42b6-ab59-28462ba5cea6.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125654512-67f27e98-2191-4c37-8e51-139e04e40cec.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125654567-a09fb8a6-79fb-4aa5-abfc-f5be054a94ce.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125655211-cd32a638-400b-4929-b28b-fda2735998ba.png)
+
+Esto nos arroja 1102 Consultas en 461.24 ms
+
+![image](https://user-images.githubusercontent.com/23094588/125656672-75f62ddd-09fc-48ca-a829-7bb4513c2d59.png)
+
+En Datatable no muestra lo mismo solo muestra un Query
+
+![image](https://user-images.githubusercontent.com/23094588/125656921-3678a727-f40b-43e6-8cc1-3aee20a2d194.png)
+
+
 
 
 
