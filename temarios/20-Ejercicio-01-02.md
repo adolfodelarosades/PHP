@@ -227,6 +227,147 @@ Hay que tratar los datos antes de devolverlos para que el proceso siga trabajand
 
 ![image](https://user-images.githubusercontent.com/23094588/125675458-83270e07-9e5c-4f2f-a33f-c8a0f4b0bf39.png)
 
+## ✅ XX I18N
+
+https://symfony.com/doc/current/translation.html
+
+Existen dos formas de Traduccir:
+
+* En las plantillas Twig
+* En el código
+
+Los diccionarios de traducciones se almacenan en:
+
+![image](https://user-images.githubusercontent.com/23094588/125916729-fd2e8475-e5ca-4da8-b81b-86b1681ddacc.png)
+
+Por ahora no tenemos ninguno.
+
+
+#### Comando para ver las traducciones que nos faltan hacer en nuestros diccionarios.
+
+**`php bin/console translation:update --dump-messages en`**
+
+![image](https://user-images.githubusercontent.com/23094588/125915921-be59be24-9e72-4c8a-85d0-4187d86bd685.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125916025-4f681282-d9f7-406e-a982-a80638f6a513.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125916133-40346c7b-1f23-4ad8-92a0-7b02969101d0.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125916225-4192daab-b98a-4985-8e21-cea671d9c623.png)
+
+Como aun no hemos usado la traducción no detecta texto por traducir.
+
+### Empecemos por traducir la página Inicial.
+
+![image](https://user-images.githubusercontent.com/23094588/125917084-57ee7baf-7986-40ec-ad06-9c3f0ac2a68f.png)
+
+Esta página solo tiene dos textos: 
+
+* **Gestión de Fondos**
+* **Libros, Revistas, Documentales, Videos, Películas CDs, ...**
+
+Vamos a la plantilla de esta página y vemos que tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/125921728-8088bbdd-c79b-45bd-a5ce-38441c7e73d6.png)
+
+Lo cambiamos por lo siguiente para usar las traducciones:
+
+![image](https://user-images.githubusercontent.com/23094588/125924060-87cb5db8-3019-4c86-ab82-b439ed6636e3.png)
+
+Por lo que si ejecutamos de nuevo el comando **`php bin/console translation:update --dump-messages en`** tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/125924130-2eb7ea55-b3e1-4124-a651-b35e6b971ccc.png)
+
+***Nos indica que tenemos tres textos sin traducir***
+
+#### Comando para Crear los Archivos de Traducciones
+
+**`php bin/console translation:update --force en`**
+
+![image](https://user-images.githubusercontent.com/23094588/125925088-e84583cb-6bf6-4d8b-89af-e9625de5f1c6.png)
+
+Crea en la carpeta **`translations`** los siguientes archivos:
+
+![image](https://user-images.githubusercontent.com/23094588/125925214-7fe6a1ec-8c17-411e-a04f-871d5a233b45.png)
+
+Vamos a realizar lo mismo pero para Español:
+
+**`php bin/console translation:update --force es`**
+
+![image](https://user-images.githubusercontent.com/23094588/125925515-5023bd6b-24c8-4458-8191-a0bf0668e535.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125925538-bfde2621-4f78-4482-8996-98b97ff72706.png)
+
+
+Si abrimos el archivo **`messages+intl-icu.en.xlf`** que es el documento en Inglés tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/125925864-94c5df66-631d-4e9b-a635-4924fd5a1cc1.png)
+
+
+* **`source`** indica el texto original.
+* **`target`** indica el texto traducido.
+
+Vamos a realizar las traducciones:
+
+![image](https://user-images.githubusercontent.com/23094588/125926456-8165fba9-747a-4884-bfa9-f3889a8468fc.png)
+
+En el Documento de Español **`messages+intl-icu.es.xlf`** que lo tenemos así:
+
+![image](https://user-images.githubusercontent.com/23094588/125926803-eb2d3667-96f3-43fd-ada2-94ce85f43062.png)
+
+Simplemente quitamos las barras:
+
+![image](https://user-images.githubusercontent.com/23094588/125926900-08f4f510-de3b-4055-8519-9a3fbf0d41c3.png)
+
+#### Contamos con Archivos de Seguridad **`security.en.xlf`** y **`security.es.xlf`**
+
+***Obsérvese que en estos documentos el Original siempre es el Inglés y la traducción es la que se va cambiando según el lenguaje***
+
+![image](https://user-images.githubusercontent.com/23094588/125927233-3276dc19-b1d7-4e17-a6c2-9af9132f518b.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125927286-ace5c2d0-5aae-47b0-b2f6-95e8499ff751.png)
+
+#### También Contamos con Archivos de Validación **`validators.en.xlf`** y **`validators.es.xlf`**
+
+***Obsérvese que podemos mandar parámetros a los mensajes***
+
+![image](https://user-images.githubusercontent.com/23094588/125927984-27f2ff51-8d2f-4283-bcc2-ded2865b10e9.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125928052-6fb40c26-f9c6-41f7-88f5-acfd8e283aec.png)
+
+#### Cargar la Página 
+
+Una vez hechas las traducciones ya se muestra en la Home por que por default Symphony esta en Inglés.
+
+![image](https://user-images.githubusercontent.com/23094588/125929236-51a1b4de-ce35-45a6-8ca3-2a2dd6773225.png)
+
+#### Ver Ayuda de Translation
+
+![image](https://user-images.githubusercontent.com/23094588/125930862-f5d46788-4a27-4f5e-b819-27ddfe6efd67.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/125930789-4402019d-4148-4ce6-b228-47263d976d43.png)
+
+
+
+
+
+
+
+**``**
+**``**
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
