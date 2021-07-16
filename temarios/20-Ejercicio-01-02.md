@@ -345,8 +345,65 @@ Una vez hechas las traducciones ya se muestra en la Home por que por default Sym
 
 ![image](https://user-images.githubusercontent.com/23094588/125930862-f5d46788-4a27-4f5e-b819-27ddfe6efd67.png)
 
-
 ![image](https://user-images.githubusercontent.com/23094588/125930789-4402019d-4148-4ce6-b228-47263d976d43.png)
+
+Nos indica que por default se esta usando Inglés y que se han traducido 3 textos.
+
+### Vamos a Cambiar la Página de **`Quiénes somos`**
+
+![image](https://user-images.githubusercontent.com/23094588/125932680-dfbcb58a-4ddb-486c-8aa1-dd0482ce8da7.png)
+
+Si intentamos cargar la página tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/125932745-d72f6f10-c013-451a-8e04-73b61dd53c0f.png)
+
+Vemos que el texto **`Quiénes somos`** aparece en español pero el otro en Inglés.
+
+Si vemos la ayuda de **Translation** que ahora aparece en rojo tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/125932884-596ed105-4dcc-4fb4-a6de-c8fba68cc5d7.png)
+
+Nos indica que se nos ha olvidado hacer una traducción que se ocupa dos veces. Y por otro lado podemos ver las definiciones que se usan y que ya esta traducida, por eso el texto ya nos aparece en Inglés.
+
+![image](https://user-images.githubusercontent.com/23094588/125933069-856852d5-9e21-45fe-adad-4661f55f7ad9.png)
+
+Podemos meterla manualmente o repetir los comandos para que lo meta por nosotros:
+
+**`php bin/console translation:update --force en`**
+**`php bin/console translation:update --force es`**
+
+![image](https://user-images.githubusercontent.com/23094588/125933463-1699b850-b7d8-41db-a8b9-916a66be202c.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125933541-2fa4dda0-ec0e-4337-8073-bde7b5f12608.png)
+
+Ha insertado los textos que nos faltan por traducir, en este caso ess solo uno:
+
+![image](https://user-images.githubusercontent.com/23094588/125933654-7f0d24bf-f827-4c6f-8418-939f5c568ac0.png)
+
+Hay que realizar las traducciones:
+
+![image](https://user-images.githubusercontent.com/23094588/125933893-91a62971-e108-4a03-b293-b6b1edd8c6ea.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125934050-c12f5fef-e575-4584-ad80-75cdcd80f5fa.png)
+
+
+Si vemos la página tenemos
+
+![image](https://user-images.githubusercontent.com/23094588/125934173-35c3b38d-0c76-4434-816f-d9c2b2afef35.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125934241-f342bb8d-6758-4ec6-af3d-8e6a7d0d6875.png)
+
+***Debemos repetir este proceso para todas nuestras páginas***
+
+
+
+
+
+
+
+
+
+
 
 
 
