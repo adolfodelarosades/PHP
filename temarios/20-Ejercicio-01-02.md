@@ -449,6 +449,23 @@ Le añadimos lo siguiente:
 
 ![image](https://user-images.githubusercontent.com/23094588/125954938-ed9e9e4d-e05a-4797-8586-8a70d0f59bd0.png)
 
+Establecemos unos preficos, todoas las rutas que tenemos ahora en el controlador van a estar triplicadas por los tres idiomas.
+Sin prefijo español, con prefijo **`en`** Inglés y con prefijo **`fr`** Frances (que no tenemos las traducciones). Probando
+
+Sin Prefijos
+
+![image](https://user-images.githubusercontent.com/23094588/125955464-63640e26-1091-4371-aa39-eca5a6cbe3f3.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125955525-d27a4b45-1b8b-45c1-b5a1-abe45db327a2.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125955582-a4a91773-f76c-4279-a317-e8037cbd6ea6.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125955636-3a8cc38c-1ad6-4c1b-a19d-c25488f2bfb4.png)
+
+
+Probando con el Inglés nos sale esto.
+
+![image](https://user-images.githubusercontent.com/23094588/125955885-271fc81d-d1e9-47bd-bc67-bb2ce6d15db9.png)
 
 
 
