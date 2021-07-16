@@ -395,8 +395,59 @@ Si vemos la página tenemos
 
 ***Debemos repetir este proceso para todas nuestras páginas***
 
+### Veamos el caso de la página `Login`
+
+![image](https://user-images.githubusercontent.com/23094588/125935097-a2cc6d12-33ce-4cfb-900d-fefc565b32d6.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125935141-45b4e4ef-c6fa-4cea-bc31-f149250ba030.png)
+
+***Observese que para los mensajes de error ya maneja algunos mensajes de la seguridad***
+
+![image](https://user-images.githubusercontent.com/23094588/125937477-dcffa0c4-4e6a-4e16-b32b-7e679979cfd1.png)
+
+#### Vamos a meter los mensajes para la traducción.
+
+![image](https://user-images.githubusercontent.com/23094588/125939915-f4d0aab5-2f35-42dd-a3ba-5bef9f07095e.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125940061-8affe748-66a9-42b4-bf7b-89736e91a375.png)
+
+Repetir los comandos para que lo meta por nosotros:
+
+**`php bin/console translation:update --force en`**
+**`php bin/console translation:update --force es`**
+
+![image](https://user-images.githubusercontent.com/23094588/125940175-2e75c041-1ae6-4ee1-97a6-7319bd25c9d5.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125940238-c976f646-8c97-4b7b-8b40-e2474fd0ce94.png)
+
+Vamos a meter las traducciones:
+
+![image](https://user-images.githubusercontent.com/23094588/125940470-fdb5f7e7-acaf-4212-ac66-214133750346.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125940776-5f7b4a35-1183-4c7a-832c-a566d832e3db.png)
 
 
+Si cargamos la página tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/125952471-0a81bff8-5a13-46ae-9b91-9c2a71023250.png)
+
+
+Finalmente vamos a cambar el Menú Inicial
+
+![image](https://user-images.githubusercontent.com/23094588/125953354-7f59ad71-dcb1-4386-b960-2f4e46e80edd.png)
+
+
+### MODIFICAR RUTAS PARA IDIOMAS
+
+También es muy recurrida la técnica de poner las urls prefijadas con el idioma. En ese caso se configura así:
+
+**`config/routes/annotations.yaml`**
+
+![image](https://user-images.githubusercontent.com/23094588/125954742-6f089de9-00b1-4b01-a673-3dfa048e1957.png)
+
+Le añadimos lo siguiente:
+
+![image](https://user-images.githubusercontent.com/23094588/125954938-ed9e9e4d-e05a-4797-8586-8a70d0f59bd0.png)
 
 
 
