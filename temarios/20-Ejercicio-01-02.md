@@ -467,6 +467,116 @@ Probando con el Inglés nos sale esto.
 
 ![image](https://user-images.githubusercontent.com/23094588/125955885-271fc81d-d1e9-47bd-bc67-bb2ce6d15db9.png)
 
+Esto revisando con las Herramientas del Navegador hace una búsqueda infinita al Login por que la ruta **`http://localhost:8000/en/`** Entra a **`- { path: ^/, roles: ROLE_USER }`** y como no estoy logeado se va al Login Infinitamente:
+
+La forma de evitar esto es méter las siguientes rutas en **`security.yaml`**:
+
+![image](https://user-images.githubusercontent.com/23094588/125962893-51d6df2e-4fb4-4890-8789-8cd57ee7df17.png)
+
+Intente esto en la ruta de cada Acción pero falla
+
+![image](https://user-images.githubusercontent.com/23094588/125962990-72ec358d-dc81-4ac2-b434-3f46e847b095.png)
+
+Probando Inglés con estas Rutas:
+
+![image](https://user-images.githubusercontent.com/23094588/125964257-0e8fdb81-8cbb-4230-976b-3611cef3f35d.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125966657-36dfe1b1-acdf-413c-bb64-53eb55372866.png)
+
+Esto es por que estamos llamando directamente a los recursos publicos
+
+![image](https://user-images.githubusercontent.com/23094588/125967061-144af9cc-5b4f-4716-bdd9-47db410af6ad.png)
+
+Y debemos hacerlo usando **`asset`**
+
+![image](https://user-images.githubusercontent.com/23094588/125967467-7b0cd4ee-3dc2-47f2-8c2a-e95c27564453.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125967543-1e86415b-0fb1-4d48-a6bb-bc70a43d5465.png)
+
+Esto lo debos revisar el las páginas de **`Quienes somos`** y **`Login`**
+
+### Finalmente Vamos a poner un desplegable para cambiar de Idioma
+
+Meter Imagenes de Banderas.
+
+![image](https://user-images.githubusercontent.com/23094588/125977905-08bd13aa-d803-434e-95db-7ad8b7d05a65.png)
+
+Meter Estilos
+
+![image](https://user-images.githubusercontent.com/23094588/125978188-79a890ed-ef0f-4c6e-a953-960df0cc56d3.png)
+
+En el menú inicial **`_menu_inicial.html.twig`** meter el desplegable:
+
+![image](https://user-images.githubusercontent.com/23094588/125978510-33755c10-84b3-4237-895f-f62dc95f9e23.png)
+
+Probar Ambos Idiomas
+
+![image](https://user-images.githubusercontent.com/23094588/125978703-6bfaea9e-4d0d-402b-b79a-e3b9dcd9ca25.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125978726-75479eed-3351-4562-a4db-ab8cd4615f22.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125978816-833ed0f7-db36-4da7-97c4-46417477722a.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125978910-572cb522-c430-4f75-a60d-fb3d3fb3fbb9.png)
+
+En Inglés
+![image](https://user-images.githubusercontent.com/23094588/125979012-f324b7ef-aacb-48d6-b571-a4770241f696.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125979129-2a18993b-9859-47d0-8399-8a2d2c6c99af.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125979213-8da11db0-af14-4bc0-b609-763024ab4b88.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125979271-53f5d8c9-1c8c-4f96-adb2-c9564119a0d4.png)
+
+GIT de Todo lo Movido:
+
+![image](https://user-images.githubusercontent.com/23094588/125979459-39d29bdc-32f2-4f5c-9215-83a99a986e97.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125979520-7791da78-9a6e-4da3-a6e8-c211db6546ce.png)
+
+![image](https://user-images.githubusercontent.com/23094588/125979600-6ba7a093-167f-475e-870b-2dbaa4291ac1.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
