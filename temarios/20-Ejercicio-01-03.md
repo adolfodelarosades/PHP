@@ -77,6 +77,18 @@ Manualmente pongo **`http://localhost:8000/fondos/paginados/id/1`** y se carga:
 
 ![image](https://user-images.githubusercontent.com/23094588/126044732-362534fe-f68b-4a78-845b-14dbdc7756d2.png)
 
+Existe otro problema con al seleccionar la página 1 ya que el enlace que se arma no toma los valores
+
+![image](https://user-images.githubusercontent.com/23094588/126044856-0698b4a6-8d6f-41e0-9c2f-212052520981.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126044872-2528300d-e688-4569-99fa-3901e341f3eb.png)
+
+Si comento los valores por Default se componen ambos problemas.
+
+![image](https://user-images.githubusercontent.com/23094588/126044943-fff7bed9-d9a2-4a56-ba95-3775c91be6c0.png)
+
+
+
 #### GIT
 
 ![image](https://user-images.githubusercontent.com/23094588/126044750-2126bc55-6cbc-42f8-9bcf-d9ea486595ae.png)
