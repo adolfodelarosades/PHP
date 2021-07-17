@@ -95,25 +95,5 @@ Si comento los valores por Default se componen ambos problemas.
 
 ![image](https://user-images.githubusercontent.com/23094588/126044796-651cc893-638f-43c8-b3f2-9628f29ecfcd.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/23094588/126045292-84501804-c417-4357-9953-832b2eedbfaf.png)
 
