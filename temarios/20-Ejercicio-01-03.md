@@ -97,3 +97,64 @@ Si comento los valores por Default se componen ambos problemas.
 
 ![image](https://user-images.githubusercontent.com/23094588/126045292-84501804-c417-4357-9953-832b2eedbfaf.png)
 
+## ✅ XX Ordenación ASC/DESC por Campos
+
+Lo primero que tenemos que hacer es modificar **`FondoRepository.php`**
+
+![image](https://user-images.githubusercontent.com/23094588/126143653-2e0f45ff-d8ee-4a79-bd26-b9504e2c9505.png)
+
+Para Ordenar por Autores o Editorial se usan otras tablas por eso hay que usar su correspondiente Alias. Por otro lado también se recibe el parámetro para el tipo de Orden es decir ASC o DESC.
+
+Modificamos el Controlador **`FondosPaginadosController.php`**
+
+![image](https://user-images.githubusercontent.com/23094588/126144024-851da5da-39d2-4415-89ca-ff4e1ddf45af.png)
+
+Añadimos el parámetro para el tipo de Orden es decir ASC o DESC.
+
+En **`_menu.html.twig`** añadimos en nuevo parámetro.
+
+![image](https://user-images.githubusercontent.com/23094588/126145579-5cf955a4-2e21-4e09-baec-a531eaa9b07e.png)
+
+En **`_paginacion.html.twig`** añadimos en nuevo parámetro.
+
+![image](https://user-images.githubusercontent.com/23094588/126145781-d1a5895b-dda1-4a93-9ada-f6fec9ef7e8f.png)
+
+En **`templates/fondos_paginados/index.html.twig`** 
+
+![image](https://user-images.githubusercontent.com/23094588/126146019-efc742c9-71b0-4710-b69e-0268668838fd.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126146162-81dd600f-4e47-4804-ac79-c7b3608aed9b.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126146256-ee2cf06b-1a2c-4eb6-b158-10b5802cbcf4.png)
+
+Se subieron las imagenes **`sort_asc.png`**, **`sort_both.png`** y **`sort_desc.png`**
+
+
+### Probando la Aplicación
+
+![image](https://user-images.githubusercontent.com/23094588/126146448-09d3555b-4933-4a12-92df-ec839bf1b824.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126146487-0e78e11e-d8aa-4f98-877b-dc806febe230.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126146514-8865bf4c-c03e-47ae-b9eb-680963ef7302.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126146558-cf91ad60-b2a0-4afb-b504-853ba03b9682.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126146617-fae0d58f-c564-4e67-b300-e8b898164b70.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126146658-4f378a76-3ba2-4075-b326-3b820c194077.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126146713-34611357-2857-42e7-a5a0-bdd7b9ff0d26.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126146758-1e3193ae-1624-4451-ba17-3309d639d32e.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126146813-63218d37-606c-4170-aa99-69e50d61b693.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126146842-bd805d76-26fc-4299-880f-0ff076462a37.png)
+
+### GIT
+
+![image](https://user-images.githubusercontent.com/23094588/126146907-1e00b415-1cef-4dc1-a748-0b4d5ec53056.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126147064-4461df95-a14b-4055-9cf0-1c80c8696600.png)
+
