@@ -74,8 +74,7 @@ Pues tampoco funciono **OJO CON ESTE CAMBIO EN PRODUCCION**
 
 ![image](https://user-images.githubusercontent.com/23094588/126275404-8187def4-1186-4470-bb61-0273d0b81c02.png)
 
-
-
+Por lo menos se deben redefinir las páginas 400 y 500.
 
 ## ✅ XX Otra forma de Usar la Plantillas de Error
 
@@ -109,7 +108,7 @@ Probando el enlace **`http://localhost:8000/fondos/1`** que ya habíamos probado
 
 Una página 404 con el mensaje que mandamos.
 
-Cualquier otra excepción que mandemos en lugar de las dos anteriores(que es la misma) mandan un error 500, error en el Servidor (BD caída, SQL mal construida, falta de permisos, etc).
+Cualquier otra excepción que mandemos en lugar de las dos anteriores(que es la misma) mandan un error 500, error en el Servidor (BD caída, SQL mal construida, falta de permisos, etc). Nunca debera llegar un error 500 al usuario.
 
 ![image](https://user-images.githubusercontent.com/23094588/126282528-842d2758-7478-4a74-b053-fe5b7abfa39a.png)
 
@@ -118,27 +117,40 @@ Cualquier otra excepción que mandemos en lugar de las dos anteriores(que es la 
 
 
 
+## ✅ XX  LOGS
+
+Existen LOGS que se recuperan automaticamente en **`var/log/dev.log`**
+
+![image](https://user-images.githubusercontent.com/23094588/126283877-3dad5d68-09a1-41f1-8f5c-be11d16c5733.png)
+
+En las herramientas de Symphony también tenemos un LOG
+
+![image](https://user-images.githubusercontent.com/23094588/126284951-6711d854-b325-423f-9bd3-b37a9203cdc4.png)
+
+En las herramientas de Symphony también tenemos un EXCEPTION
+
+![image](https://user-images.githubusercontent.com/23094588/126285151-64f62d35-1345-42a5-93aa-8293ff3232ff.png)
+
+A traves de configuración en el archivo **`monolog.yaml`** 
+
+![image](https://user-images.githubusercontent.com/23094588/126286064-c18b0357-1c79-465f-ba3a-2ea5a446d74d.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126285512-fb99454a-3786-44d9-82d6-e79006b406b5.png)
+
+Indicamos a partir del **`level: debug`** se registren en el archivo indicado en la **`path`** como **`type: stream`** es decir texto.
+
+Si vemos el de Producción tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/126286017-e7cc9acd-9346-4e70-bd67-974d89cb37ae.png)
+
+Básicamente no registra nada si no tiene como minimo nivel de **`error`** (cuando más registro más tardo). Pero si alcanza el nivel **`error`** registro todo a partir de **`debug`**
+
+Hay 7 Niveles.
 
 
+Si quiero registrar algo en el LOG lo hago así:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/23094588/126288122-2d580ddb-41a3-4c0a-9f26-938353f04fe4.png)
 
 
 
