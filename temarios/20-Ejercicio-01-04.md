@@ -21,7 +21,11 @@ Otra opción es mejor añadirla en en lugar de la opción **`- { path: ^/_error,
 
 ![image](https://user-images.githubusercontent.com/23094588/126196296-29c72833-2aa1-42c6-aaa1-e51a4b8c8743.png)
 
+Si no cambiamos las platillas se muestran así:
 
+![image](https://user-images.githubusercontent.com/23094588/126199882-c410d1e6-0706-43c3-9c69-72cf887a58b7.png)
+
+La plantilla Original esta en **`vendor/symfony/error-handler/Resources/views/error.html.php**`
 
 
 
