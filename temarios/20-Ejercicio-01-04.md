@@ -116,6 +116,79 @@ Cualquier otra excepción que mandemos en lugar de las dos anteriores(que es la 
 
 ![image](https://user-images.githubusercontent.com/23094588/126282571-37c4dff9-720a-410f-b588-32379736557e.png)
 
+Si lanzamos en el Controlador la excepción **`createNotFoundException`** cuando no se encuentra un recurso tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/126294107-2f3ad34d-2546-408c-ae1e-6f67b91e0234.png)
+
+Cambiando la plantilla a :
+
+![image](https://user-images.githubusercontent.com/23094588/126293787-b6adafb7-c566-4ba2-b67b-e8a7bf874dfb.png)
+
+Usamos **`{{ status_code }}`** y **`{{ exception.message }}`** para mostrar mensajes del estado y mensaje de la excepción.
+
+
+Probando en Prod:
+
+![image](https://user-images.githubusercontent.com/23094588/126293895-0eba20b0-7822-4ba4-9d5d-ad78a8a19a95.png)
+
+La salida que obtenemos es:
+
+![image](https://user-images.githubusercontent.com/23094588/126294421-b49a6266-855b-4246-aae1-1da3040e66da.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126294552-ed4cc579-29a8-4a0d-a166-9be5fe95d04c.png)
+
+En particular me gusta el primer diseño.
+
+Vamos a afinarlo y nos queda así:
+
+En **`FondosController`**
+![image](https://user-images.githubusercontent.com/23094588/126307948-a993000e-76e2-4152-b32d-ac4e6ee6c51a.png)
+
+En **`error404.html.twig`**
+
+![image](https://user-images.githubusercontent.com/23094588/126308269-5778c5cb-584f-4154-952e-b191492f3cc9.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/126308072-9bca03ce-eb0c-475d-b659-ebf013004d89.png)
+
+Limpiamos la Cache
+
+![image](https://user-images.githubusercontent.com/23094588/126304897-d1d6a924-3f0a-4cb1-a44e-cdf3a8af435e.png)
+
+### Probando en Producción
+
+Cargamos la Ruta
+
+http://localhost:8000/fondos/1
+
+![image](https://user-images.githubusercontent.com/23094588/126307105-3d257b6a-bd66-466d-bd70-1cf42cd1e2dc.png)
+
+http://localhost:8000/ventas
+
+![image](https://user-images.githubusercontent.com/23094588/126306954-51fbb5d6-2f97-494f-a530-4a65b90f83ae.png)
+
+Hay lios con algunos enlaces **Fondos**
+
+![image](https://user-images.githubusercontent.com/23094588/126308800-5551fde4-db01-4e56-84ec-0b7218847cc4.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126308823-09de5c94-6078-4cfd-8b32-7deb616eb12a.png)
+
+
+### GIT
+
+![image](https://user-images.githubusercontent.com/23094588/126308498-3c236d0a-0a2b-4523-aaf1-85f85a822f45.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126308568-4cdb3f54-7411-4f4b-8e46-94060427cccb.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
