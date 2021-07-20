@@ -169,6 +169,20 @@ http://localhost:8000/ventas
 
 Hay lios con algunos enlaces **Fondos**
 
+**ESTO ES POR QUE TENEMOS dump EN EL CÓDIGO Y EN PRODUCCIÓN NO DEBEN ESTAR**
+***Para detectar el error tuvimos que cambiar en `monolog.yaml` de PRODUCION LO QUE TIENE EN DES PARA QUE GENERE EL LOG DE PRODUCCION Y VER EL ERROR.***
+
+![image](https://user-images.githubusercontent.com/23094588/126341244-7812c94e-0417-4674-8ce9-ebe7880f0774.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126341663-da53cbc0-47d9-4644-834d-799b9a1b9ef7.png)
+
+
+![image](https://user-images.githubusercontent.com/23094588/126341424-ec8f8dc7-8027-4c60-b73f-c799388ae6fe.png)
+
+
+
+
+
 ![image](https://user-images.githubusercontent.com/23094588/126308800-5551fde4-db01-4e56-84ec-0b7218847cc4.png)
 
 ![image](https://user-images.githubusercontent.com/23094588/126308823-09de5c94-6078-4cfd-8b32-7deb616eb12a.png)
