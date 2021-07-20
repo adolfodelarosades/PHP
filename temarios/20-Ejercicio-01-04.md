@@ -1,4 +1,4 @@
-## XX Plantillas de Error
+## ✅ XX Plantillas de Error
 
 ![image](https://user-images.githubusercontent.com/23094588/126192239-d9aa3dda-d6fc-4d74-9451-f2b510fba672.png)
 
@@ -61,6 +61,67 @@ Si ahora probamos nuevamente el enlace **`http://localhost:8000/ventas`** tenemo
 ![image](https://user-images.githubusercontent.com/23094588/126274314-a6fd1750-be4c-4dd7-ad9f-7603d35ab75a.png)
 
 ![image](https://user-images.githubusercontent.com/23094588/126274422-a8fc4670-ac24-433d-921f-bb787000f47e.png)
+
+### Ojo con Producción
+
+Si nos logeamos nos muestra lo siguiente
+
+![image](https://user-images.githubusercontent.com/23094588/126275069-c62f6458-d514-42e8-8d52-7f3f43804bb7.png)
+
+Esto es por que establecimos **error** solo para DEV deberíamos añadir la ruta de los errores en la SECURITY.
+
+Pues tampoco funciono **OJO CON ESTE CAMBIO EN PRODUCCION**
+
+![image](https://user-images.githubusercontent.com/23094588/126275404-8187def4-1186-4470-bb61-0273d0b81c02.png)
+
+
+
+
+## ✅ XX Otra forma de Usar la Plantillas de Error
+
+Actualmente tenemos en **Fondos** lo siguiente:
+
+![image](https://user-images.githubusercontent.com/23094588/126278298-ee2fa276-00b5-499b-b8a6-b49945efd57e.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126278371-4a5788f6-1e92-47f9-aaaf-52be6eb4a567.png)
+
+Esto pasa por que en el Controlador **`FondosController`** tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/126278574-eec27c8c-c103-4feb-8275-bfa26195502a.png)
+
+Cuando no encontramos un recurso lo mandamos a una plantilla común llamada **`comunes/recurso-no-encontrado.html.twig`** mandando como parámetro el mensaje a pintar.
+
+En lugar de esto podemos lanzar una **Exception** por ejemplo **`createNotFoundException`** la cual lanza una excepción concreta que es **`NotFoundHttpException`** 
+
+![image](https://user-images.githubusercontent.com/23094588/126279687-6655f77e-7fac-4c26-a69e-1e5b1150a214.png)
+
+Esto es lo mismo que hacer:
+
+![image](https://user-images.githubusercontent.com/23094588/126280130-a885cd02-da35-4c83-87ee-282822cd507a.png)
+
+Symphone detecta la Excepción y manda una página 404.
+
+Podemos manejar el error de dos formas mandando un status 200 y un mensaje de error personalizado(WEB) o redirigir a la plantilla del error 404, para un API se suele mandar un 404 cuando el recurso no se encuentra.
+
+Probando el enlace **`http://localhost:8000/fondos/1`** que ya habíamos probado tenemos:
+
+![image](https://user-images.githubusercontent.com/23094588/126281243-cb632ce6-7fef-4841-b67a-3c1ac5046312.png)
+
+Una página 404 con el mensaje que mandamos.
+
+Cualquier otra excepción que mandemos en lugar de las dos anteriores(que es la misma) mandan un error 500, error en el Servidor (BD caída, SQL mal construida, falta de permisos, etc).
+
+![image](https://user-images.githubusercontent.com/23094588/126282528-842d2758-7478-4a74-b053-fe5b7abfa39a.png)
+
+![image](https://user-images.githubusercontent.com/23094588/126282571-37c4dff9-720a-410f-b588-32379736557e.png)
+
+
+
+
+
+
+
+
 
 
 
